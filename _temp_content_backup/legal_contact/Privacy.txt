@@ -1,0 +1,80 @@
+PRIVACY POLICY - LISTHOOK
+Last updated: March 15, 2025
+
+================================================================================
+
+1. INTRODUCTION
+================================================================================
+ListHook ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our real estate marketing automation platform.
+
+================================================================================
+
+2. INFORMATION WE COLLECT
+================================================================================
+
+2.1 Personal Information
+------------------------
+We collect information that you provide directly to us, including:
+- Name and contact information
+- Billing information and payment details
+- Real estate license information
+- MLS credentials and listing data
+- Marketing content and materials
+- Communication preferences
+
+2.2 Automatically Collected Information
+---------------------------------------
+When you use our platform, we automatically collect:
+- Device and browser information
+- IP address and location data
+- Usage patterns and preferences
+- Marketing campaign performance data
+
+================================================================================
+
+3. HOW WE USE YOUR INFORMATION
+================================================================================
+We use the collected information to:
+- Provide and maintain our services
+- Process payments and billing
+- Send marketing materials on your behalf
+- Analyze and improve our platform
+- Communicate with you about our services
+- Comply with legal obligations
+
+================================================================================
+
+4. INFORMATION SHARING
+================================================================================
+We may share your information with:
+- Service providers and partners
+- Payment processors
+- Marketing and printing services
+- Analytics providers
+- Legal authorities when required
+
+================================================================================
+
+5. DATA SECURITY
+================================================================================
+We implement appropriate security measures to protect your information. However, no method of transmission over the Internet is 100% secure.
+
+================================================================================
+
+6. YOUR RIGHTS
+================================================================================
+You have the right to:
+- Access your personal information
+- Correct inaccurate data
+- Request deletion of your data
+- Opt-out of marketing communications
+- Export your data
+
+================================================================================
+
+7. CONTACT US
+================================================================================
+If you have questions about this Privacy Policy, please contact us at:
+
+Email: privacy@listhook.com
+Address: 123 Business Ave, San Francisco, CA 94107

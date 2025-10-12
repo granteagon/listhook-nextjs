@@ -1,0 +1,430 @@
+===============================================
+CONTENT EXTRACTION: BlogPost.tsx
+===============================================
+FILE PATH: /Users/Grant.Eagon/Repos/listhook-site/src/pages/BlogPost.tsx
+EXTRACTION DATE: 2025-10-12
+
+===============================================
+1. BLOG POST STRUCTURE & LAYOUT
+===============================================
+
+Page Structure:
+- Container: max-width 3xl, centered
+- Background: gray-50
+- Padding: pt-32 pb-20
+
+Main Components:
+1. Back button section
+2. Article header (image + metadata)
+3. Article content area
+4. Newsletter signup CTA
+
+Article Header Layout:
+- White background card
+- Rounded corners with shadow
+- Border: gray-100
+- Padding: p-8
+
+Header Elements:
+- Featured image (aspect-[2/1], full width)
+- Category badge (coral-500, medium font weight)
+- Read time with clock icon
+- Title (text-3xl, bold, blue-900)
+- Author info with user icon
+- Share button
+
+Content Area Layout:
+- White background card
+- Rounded corners with shadow
+- Padding: p-8
+- Prose styling for rich text
+
+Newsletter Section:
+- Blue-900 background
+- Rounded corners
+- Centered text
+- Email input with subscribe button
+- Margin top: mt-12
+
+===============================================
+2. EXISTING BLOG POSTS & FULL CONTENT
+===============================================
+
+POST 1: "direct-mail-vs-digital-marketing"
+--------------------------------------------
+Title: Why Direct Mail Still Outperforms Digital for Real Estate Lead Generation
+Author: Sarah Johnson
+Date: March 15, 2025
+Read Time: 6 min read
+Category: Lead Generation
+Image: https://images.pexels.com/photos/4464816/pexels-photo-4464816.jpeg
+
+Content Sections:
+- Introduction paragraph on direct mail effectiveness
+- Why Direct Mail Works Better (3 subsections)
+  - Higher Engagement Rates (80-90% mail opening rate, 95% engagement)
+  - Trust and Credibility (87% find direct mail believable vs 48% for email)
+  - Emotional Impact (70% feel valued, 48% keep postcards as references)
+- Response Rates and ROI
+  - Direct mail: 112% ROI, 4.4% response rate
+  - Email: 0.12% response rate
+  - Direct mail generates 6x more responses than digital combined
+- Best Practices for Real Estate Direct Mail
+  - Target Carefully (demographics, turnover rates, life events)
+  - Design for Impact (quality images, clear CTAs, consistent branding)
+  - Track and Measure (QR codes, landing pages, cost per lead)
+- Integrating with Digital (QR codes, retargeting, multi-channel campaigns)
+- Conclusion
+
+POST 2: "80-20-rule-real-estate-marketing"
+--------------------------------------------
+Title: The 80/20 Rule of Real Estate Marketing: Focus on What Works
+Author: Michael Chen
+Date: March 10, 2025
+Read Time: 5 min read
+Category: Strategy
+Image: https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg
+
+Content Sections:
+- Understanding the 80/20 Rule in Real Estate
+  - Examples: 80% of deals from 20% of marketing efforts
+- Identifying Your High-Impact Activities
+  - Track Your Lead Sources
+  - Analyze Your Time Investment
+  - Review Past Success
+- The 20% That Matters Most
+  - Consistent Follow-Up (past clients, lead nurturing, birthday cards)
+  - Geographic Farming (postcards, market updates, community involvement)
+  - Referral Marketing (events, reward programs, partnerships)
+- Automating the 80/20 Way (automation tools and CRM)
+- Conclusion
+
+POST 3: "complete-guide-real-estate-postcards"
+-----------------------------------------------
+Title: The Complete Guide to Real Estate Postcard Marketing in 2024
+Author: Sarah Chen
+Date: 2024-01-15
+Read Time: 12 min read
+Category: Strategy (implied from tags)
+Image: https://images.unsplash.com/photo-1560518883-ce09059eeffa
+
+Content Sections (HTML formatted):
+- Introduction to postcard marketing effectiveness
+- Why Postcards Still Work in 2024 (4 reasons with physical presence, high visibility, better recall, targeted reach)
+- The Numbers Don't Lie (ROI: $4-12 per $1, response rates 5.2% vs 0.2% digital, cost per lead $15-25)
+- Types of Postcards That Convert
+  - Just Listed/Just Sold
+  - Market Update
+  - Personal Branding
+- Design Best Practices (bold headlines, quality images, clear CTA, contact info, branding)
+- Timing and Frequency (monthly, event-triggered, seasonal campaigns)
+- Common Mistakes to Avoid (5 items)
+- Automation: The Game Changer (4 benefits)
+- Measuring Success (4 key metrics)
+- Getting Started (5-step action plan)
+
+POST 4: "postcard-marketing-roi-study-2024"
+--------------------------------------------
+Title: The 2024 Study: Why Real Estate Postcards Outperform Digital Marketing
+Author: Dr. Michael Rodriguez
+Date: 2024-01-20
+Read Time: 8 min read
+Category: Research (implied from tags)
+Image: https://images.unsplash.com/photo-1551288049-bebda4e38f71
+
+Content Sections (HTML formatted):
+- Study Methodology (10,000+ campaigns, 2,500 agents, 15 markets, 24 months)
+- Key Findings
+  - Return on Investment (Postcards: $4.20-$11.80, Facebook: $1.90-$3.40, Google: $2.10-$4.20, Instagram: $1.40-$2.80)
+  - Response Rates (Postcards: 5.2%, Email: 1.8%, Facebook: 0.9%, Display: 0.2%)
+  - Lead Quality (conversion to appointments by channel)
+- Why Postcards Outperform Digital
+  - Neurological Processing (21% less cognitive effort)
+  - Lack of Competition (11 pieces/week vs 5000 digital ads/day)
+  - Perceived Value (82% trust physical mail more)
+- Geographic Variations (suburban: $8.20, urban: $6.40, rural: $11.20 ROI)
+- Demographic Insights (age groups and income levels)
+- Timing and Frequency Analysis (optimal delivery days and mailing frequency)
+- Cost Analysis (average cost per lead by channel)
+- Success Factors (5 characteristics of high-performing campaigns)
+- Limitations and Considerations (4 factors)
+- Recommendations (5 strategic recommendations)
+- Conclusion with partnership note
+
+POST 5: "lead-generation-strategies-2024"
+------------------------------------------
+Title: 10 Lead Generation Strategies That Actually Work in 2024
+Author: Jennifer Smith
+Date: 2024-01-10
+Read Time: 7 min read
+Category: Lead Generation
+Image: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d
+
+Content Sections (HTML formatted):
+- Introduction
+- 10 strategies (numbered):
+  1. Geographic Farming with Smart Postcards
+  2. Strategic Social Media Presence
+  3. Google My Business Optimization
+  4. Video Marketing
+  5. Referral Program
+  6. Local SEO and Content Marketing
+  7. Open House Follow-Up
+  8. Strategic Partnerships
+  9. Email Nurture Campaigns
+  10. Community Involvement
+- Measuring Success (key metrics)
+- Implementation Tips
+
+POST 6: "market-analysis-lead-conversion"
+------------------------------------------
+Title: Market Analysis: What Drives Real Estate Lead Conversion
+Author: Mike Johnson
+Date: 2024-01-05
+Read Time: 9 min read
+Category: Market Analysis
+Image: https://images.unsplash.com/photo-1551836022-deb4988cc6c0
+
+Content Sections (HTML formatted):
+- Introduction (analysis of 50,000+ leads)
+- The Conversion Funnel (6% conversion rate to closed transactions)
+- Speed to Contact (21% conversion under 5 min vs 4% at 30+ min)
+- Communication Preferences (by generation)
+- Trust Building Factors
+- Key Takeaways
+
+POST 7: "building-personal-brand-real-estate"
+----------------------------------------------
+Title: Building Your Personal Brand as a Real Estate Agent
+Author: Lisa Davis
+Date: 2023-12-28
+Read Time: 6 min read
+Category: Branding
+Image: https://images.unsplash.com/photo-1556761175-b413da4baf72
+
+Content Sections (HTML formatted):
+- Introduction to personal brand importance
+- Core Elements of Your Brand (value proposition, visual identity, brand voice)
+- Building Your Online Presence (website and social media)
+- Content Strategy (market updates, tips, neighborhoods, success stories)
+- Consistency is Key
+
+POST 8: "psychology-real-estate-marketing"
+-------------------------------------------
+Title: The Psychology of Real Estate Marketing
+Author: Dr. Amanda Wilson
+Date: 2023-12-20
+Read Time: 11 min read
+Category: Psychology
+Image: https://images.unsplash.com/photo-1559526324-4b87b5e36e44
+
+Content Sections (HTML formatted):
+- Introduction to buyer/seller psychology
+- Core Psychological Principles (loss aversion, social proof, anchoring)
+- Emotional Triggers in Real Estate (security, status, belonging)
+- Color Psychology in Marketing
+- The Power of Storytelling
+
+POST 9: "neighborhood-farming-ultimate-guide"
+----------------------------------------------
+Title: Neighborhood Farming: The Ultimate Guide
+Author: Tom Anderson
+Date: 2023-12-15
+Read Time: 10 min read
+Category: Farming
+Image: https://images.unsplash.com/photo-1560518883-ce09059eeffa
+
+Content Sections (HTML formatted):
+- Introduction to geographic farming
+- Choosing Your Farm Area (500-2000 homes with good turnover)
+- Building Your Farming Strategy (market reports, content calendar, multi-channel)
+- Timeline for Results (6-12 months for meaningful results)
+
+POST 10: "data-optimize-marketing-campaigns"
+---------------------------------------------
+Title: Using Data to Optimize Your Marketing Campaigns
+Author: Sarah Chen
+Date: 2023-12-10
+Read Time: 8 min read
+Category: Analytics
+Image: https://images.unsplash.com/photo-1551288049-bebda4e38f71
+
+Content Sections (HTML formatted):
+- Introduction to data-driven marketing
+- Key Metrics to Track (lead generation, conversion, engagement)
+- A/B Testing Strategies (headlines, designs, CTAs, timing)
+- Technology Stack for Data Analysis (Google Analytics, CRM, call tracking, email analytics)
+- Building a Data-Driven Culture (team training, regular reviews)
+
+===============================================
+3. CATEGORY INFORMATION
+===============================================
+
+Categories Used:
+1. Lead Generation
+2. Strategy
+3. Research
+4. Market Analysis
+5. Branding
+6. Psychology
+7. Farming
+8. Analytics
+
+Category Display:
+- Text color: coral-500
+- Font weight: medium
+- Font size: text-sm
+- Positioned before read time in header
+
+===============================================
+4. AUTHOR INFORMATION
+===============================================
+
+Authors Featured:
+1. Sarah Johnson - Lead Generation expert
+2. Michael Chen - Strategy specialist
+3. Sarah Chen - Multiple posts (Strategy, Analytics)
+4. Dr. Michael Rodriguez - Research author
+5. Jennifer Smith - Lead Generation
+6. Mike Johnson - Market Analysis
+7. Lisa Davis - Branding
+8. Dr. Amanda Wilson - Psychology (PhD)
+9. Tom Anderson - Farming
+
+Author Display:
+- Icon: User icon (16px) from lucide-react
+- Text color: gray-600
+- Font size: text-sm
+- Positioned in header next to date
+- Color for icon: gray-400
+
+===============================================
+5. CONTENT FORMATTING & RENDERING
+===============================================
+
+Content Parsing:
+The component parses markdown-like content:
+- Lines starting with "##" → h2 tags (text-2xl, bold, blue-900, mt-8, mb-4)
+- Lines starting with "###" → h3 tags (text-xl, semibold, blue-900, mt-6, mb-3)
+- Lines starting with "-" → li tags (gray-600, ml-4)
+- Other non-empty lines → p tags (gray-600, mb-4, leading-relaxed)
+
+NOTE: Some posts use HTML formatting in content field, others use markdown-style formatting. The component only handles markdown-style parsing, not HTML.
+
+Prose Styling:
+- Class: prose prose-blue max-w-none
+- Custom styling applied for:
+  - Headings (h2, h3)
+  - Lists (li)
+  - Paragraphs (p)
+
+Typography:
+- H2: text-2xl, bold, blue-900
+- H3: text-xl, semibold, blue-900
+- Body: text-gray-600
+- Category: coral-500
+- Meta text: gray-500
+
+===============================================
+6. TECHNICAL DETAILS
+===============================================
+
+Data Structure:
+- Posts stored as object with slugs as keys
+- Each post contains: title, author, date, readTime, category, image, content
+- Some posts have additional fields: excerpt, tags
+- Content field contains either markdown-style or HTML strings
+
+Routing:
+- Uses useParams hook to get slug from URL
+- Path format: /blog/${slug}
+- Posts accessed via: blogPosts[slug as keyof typeof blogPosts]
+
+Components Used:
+- Button component with outline type for back button
+- Icons from lucide-react: Clock, User, ArrowLeft, Share2
+
+Error Handling:
+- If post not found, displays "Post not found" message
+- Provides link back to blog listing
+
+React Hooks:
+- useParams (from react-router-dom)
+- useEffect (for setting document title)
+- Link (from react-router-dom)
+
+Document Title:
+- Format: "${post.title} - ListHook Blog"
+- Updated on component mount when post exists
+
+Interactive Elements:
+1. Back to Blog button (routes to /blog)
+2. Share button (button element, no action implemented)
+3. Newsletter email input
+4. Subscribe button
+
+Newsletter Section:
+- Title: "Want More Marketing Tips?"
+- Description: "Join our newsletter for weekly insights on real estate marketing."
+- Email input with Subscribe button
+- Background: blue-900
+- Rounded corners: rounded-lg
+- Padding: p-8
+- Text colors: white for title, blue-100 for description
+
+Image Display:
+- Full width images
+- Aspect ratio: aspect-[2/1]
+- Object fit: cover
+- No lazy loading implemented
+
+===============================================
+7. CONTENT THEMES & TOPICS
+===============================================
+
+Primary Themes:
+1. Direct Mail Marketing (multiple posts)
+2. Lead Generation Strategies
+3. Marketing ROI and Data Analysis
+4. Geographic Farming
+5. Personal Branding
+6. Marketing Psychology
+7. Strategic Planning (80/20 rule)
+
+Content Focus:
+- Real estate agent marketing
+- Postcard vs digital marketing effectiveness
+- Data-driven decision making
+- Practical implementation guides
+- Research-backed strategies
+- Step-by-step actionable advice
+
+Target Audience:
+- Real estate agents
+- Real estate professionals
+- Marketing-focused real estate businesses
+- Agents seeking lead generation strategies
+
+===============================================
+8. POST SLUG PATTERNS
+===============================================
+
+Slug Format: kebab-case (lowercase with hyphens)
+
+Examples:
+- direct-mail-vs-digital-marketing
+- 80-20-rule-real-estate-marketing
+- complete-guide-real-estate-postcards
+- postcard-marketing-roi-study-2024
+- lead-generation-strategies-2024
+- market-analysis-lead-conversion
+- building-personal-brand-real-estate
+- psychology-real-estate-marketing
+- neighborhood-farming-ultimate-guide
+- data-optimize-marketing-campaigns
+
+Pattern: topic-description or guide-name-year
+
+===============================================
+END OF EXTRACTION
+===============================================

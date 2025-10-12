@@ -1,0 +1,216 @@
+====================================
+HOW IT WORKS PAGE CONTENT EXTRACTION
+====================================
+
+=== PAGE TITLE ===
+Document Title: "How It Works - ListHook"
+
+=== HERO SECTION ===
+Main Headline: "How ListHook Works"
+Subtitle: "Automated postcard marketing that turns your listings into more listings. Set up once, then let our system do the work."
+CTA: "Get Started" with arrow icon (ArrowRight) → /campaign/new
+
+=== THREE-STEP PROCESS ===
+
+Step 1: Connect Your MLS
+Icon: Mail (lucide-react, size 24)
+Icon color: text-blue-700
+Background: Blue-50 circular background
+Number Badge: Coral-50 background with coral-500 number
+Description: "Link your MLS account to automatically create postcards when you list or sell a property. Our AI handles the design and targeting."
+
+Step 2: Postcards Are Sent
+Icon: QrCode (lucide-react, size 24)
+Icon color: text-blue-700
+Background: Blue-50 circular background
+Number Badge: Coral-50 background with coral-500 number
+Description: "When a listing is added or sold, we automatically generate and mail beautiful postcards to the optimal radius around the property."
+
+Step 3: Recipients Take Action
+Icon: Users (lucide-react, size 24)
+Icon color: text-blue-700
+Background: Blue-50 circular background
+Number Badge: Coral-50 background with coral-500 number
+Description: "Recipients scan the QR code on the postcard and are directed to a professional landing page where they can contact you directly."
+
+=== PROCESS VISUALIZATION SECTION ===
+Background: Blue-900
+Headline: "Automated End-to-End Process"
+Text color: White
+
+Description: "ListHook handles everything automatically - from detecting new listings to designing postcards and tracking results. You focus on closing deals while we handle the marketing."
+
+Key Points (with coral bullet dots):
+- Automatic postcard creation from MLS data
+- AI-powered design and targeting
+- Digital lead capture and tracking
+
+Image: Process visualization
+Alt text: "ListHook Process"
+Source: https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg
+Styling: rounded-lg shadow-xl
+
+Layout: 2-column grid (text left, image right) on medium+ screens
+
+=== BENEFITS SECTION ===
+Section Headline: "Why Agents Love ListHook"
+
+Three Benefits:
+
+1. Quick 10-Minute Setup
+   Icon: Clock (lucide-react, size 24)
+   Icon color: text-blue-700
+   Background: Blue-50 rounded-full with padding
+   Description: "Connect your MLS and customize your preferences in minutes, not hours."
+
+2. Proven ROI
+   Icon: DollarSign (lucide-react, size 24)
+   Icon color: text-blue-700
+   Background: Blue-50 rounded-full with padding
+   Description: "Our system generates $4-$12 for every dollar spent on average."
+
+3. Fully Automated
+   Icon: Mail (lucide-react, size 24)
+   Icon color: text-blue-700
+   Background: Blue-50 rounded-full with padding
+   Description: "Zero manual work needed - postcards are sent automatically when you list or sell."
+
+Layout: 3-column grid on medium+ screens
+
+=== FINAL CTA SECTION ===
+Headline: "Ready to Automate Your Marketing?"
+Subtitle: "Join successful agents who are growing their business with ListHook."
+
+CTAs:
+1. "Start Free Trial" (primary button) → /campaign/new
+2. "View Pricing" (outline button) → /pricing
+
+=== COMPONENT STRUCTURE ===
+
+StepCard Component:
+- Card wrapper with hover effect
+- Two-part layout: number badge + icon/content
+- Number badge: Coral-50 background, coral-500 text, rounded-full, positioned left
+- Icon: Blue-50 circular background, blue-700 icon
+- Title: text-xl font-semibold text-blue-900
+- Description: text-gray-600 leading-relaxed
+- Padding: p-8
+
+BenefitCard Component:
+- Flex layout with icon and text
+- Icon in blue-50 rounded-full with padding
+- Title: font-semibold text-blue-900
+- Description: text-gray-600
+
+Page Layout:
+- Container with pt-32 pb-20 (top padding for nav, bottom padding)
+- Responsive padding: px-4 sm:px-6 lg:px-8
+- Max-widths: max-w-3xl for centered sections, max-w container for full width
+
+=== COLOR SCHEME ===
+Primary Colors:
+- Blue-900: Main headings
+- Blue-700: Icon color
+- Blue-50: Icon backgrounds
+- Blue-100: Text on dark backgrounds
+- Coral-50: Number badge backgrounds
+- Coral-500: Number text
+- Gray-600: Body text
+- White: Card backgrounds and text on dark
+
+Background Colors:
+- White: Main page background
+- Blue-900: Process visualization section
+- Gray-50: Subtle section backgrounds (if any)
+
+=== TYPOGRAPHY ===
+Headings:
+- H1 (page title): text-4xl font-bold
+- H2 (section titles): text-3xl font-bold
+- H3 (step/benefit titles): text-xl font-semibold
+- Body text: text-xl for subtitles
+- Description text: Standard size with leading-relaxed
+
+Font colors:
+- Headings: text-blue-900
+- Body: text-gray-600
+- On dark: text-white or text-blue-100
+
+=== ICON USAGE ===
+All icons from lucide-react library:
+- Mail: Step 1 (MLS connection) and Automation benefit
+- QrCode: Step 2 (Postcard sending)
+- Users: Step 3 (Lead capture)
+- Clock: Quick setup benefit
+- DollarSign: ROI benefit
+- ArrowRight: CTA button decoration (size 16)
+
+Standard icon size: 24px
+CTA icon size: 16px
+
+=== KEY ROUTES ===
+- /campaign/new (Start Free Trial / Get Started)
+- /pricing (View Pricing)
+
+=== VALUE PROPOSITIONS ===
+1. "Set up once, then let our system do the work" - one-time effort
+2. "Our AI handles the design and targeting" - intelligent automation
+3. "Optimal radius around the property" - smart geographic targeting
+4. "Professional landing page" - quality lead capture
+5. "Contact you directly" - no middleman
+6. "Everything automatically" - zero manual work
+7. "10-minute setup" - fast onboarding
+8. "$4-$12 for every dollar spent" - strong ROI promise
+9. "You focus on closing deals while we handle the marketing" - time savings
+
+=== UNIQUE SELLING POINTS ===
+- Automatic detection of new listings
+- AI-powered design (no manual design work)
+- Smart radius calculation based on neighborhood
+- QR code integration for tracking
+- Professional landing pages included
+- Direct lead delivery to agent
+- End-to-end automation
+- 10-minute setup promise
+- Proven ROI metrics ($4-$12 return per $1)
+- Zero manual work after setup
+
+=== IMAGE REFERENCES ===
+Single process image:
+- Pexels stock photo: pexels-photo-8293778.jpeg
+- Same image used across Features and How It Works pages
+- Shows workspace/technology environment
+- Used to represent the automated system
+- Styling: rounded-lg shadow-xl
+
+=== LAYOUT PATTERNS ===
+1. Hero: Centered text + CTA with icon
+2. Three Steps: 3-column card grid with numbered badges
+3. Process Visualization: 2-column dark section (text + image)
+4. Benefits: 3-column benefit grid
+5. Final CTA: Centered text + dual CTAs
+
+=== STYLING DETAILS ===
+Step Cards:
+- Hover effect enabled
+- Number badge: w-12 h-12, absolute positioning in flex-shrink-0 wrapper
+- Icon circle: w-12 h-12, bg-blue-50, rounded-full
+- Flex layout for number + content
+- Generous spacing: mb-6 for icon, mb-3/4 for title
+
+Benefit Cards:
+- Horizontal flex layout
+- Icon padding: p-3
+- Icon margin: mr-4
+- Title margin: mb-2
+
+Sections:
+- Consistent padding: py-20 for sections
+- mb-20 for section separation
+- mb-16 for hero to content gap
+- mb-8 between subtitle and CTA
+
+Responsive:
+- Grid breakpoint: md:grid-cols-3 for steps and benefits
+- md:grid-cols-2 for process visualization
+- Container responsive padding: px-4 sm:px-6 lg:px-8

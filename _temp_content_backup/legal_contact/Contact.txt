@@ -1,0 +1,102 @@
+CONTACT US - LISTHOOK
+
+================================================================================
+
+CONTACT INFORMATION
+================================================================================
+
+Phone Support
+-------------
+Phone: (555) 123-4567
+Hours: Monday-Friday, 9am - 5pm EST
+Tel Link: tel:+1-555-123-4567
+
+Email
+-----
+Email: support@listhook.com
+Availability: 24/7 Support
+
+Office Location
+---------------
+Address: 123 Business Ave
+         San Francisco, CA 94107
+Map Link: https://maps.google.com
+
+================================================================================
+
+CONTACT FORM STRUCTURE
+================================================================================
+
+Form Fields:
+-----------
+1. Name (text input, required)
+   - ID: name
+   - Type: text
+   - Label: Name
+
+2. Email (email input, required)
+   - ID: email
+   - Type: email
+   - Label: Email
+
+3. Subject (dropdown select, required)
+   - ID: subject
+   - Type: select
+   - Label: Subject
+   - Options:
+     * Select a topic (default/placeholder)
+     * Sales Inquiry
+     * Technical Support
+     * Billing Question
+     * Other
+
+4. Message (textarea, required)
+   - ID: message
+   - Type: textarea
+   - Rows: 4
+   - Label: Message
+
+Form Features:
+-------------
+- Response time: within 24 hours
+- Phone support available
+- Email updates on your request
+- Submit button: "Send Message"
+
+================================================================================
+
+FREQUENTLY ASKED QUESTIONS
+================================================================================
+
+Q: What is your response time?
+A: We typically respond to all inquiries within one business day. For urgent matters, please call our support line.
+
+Q: Do you offer phone support?
+A: Yes, our phone support is available Monday through Friday, 9am to 5pm EST.
+
+Q: Can I schedule a demo?
+A: Absolutely! You can schedule a personalized demo through our sales team. Just select "Sales Inquiry" in the contact form.
+
+Q: Where are you located?
+A: Our main office is in San Francisco, but we serve real estate agents nationwide.
+
+================================================================================
+
+COMPANY INFORMATION
+================================================================================
+
+Company Name: ListHook
+Service: Real Estate Marketing Automation Platform
+Service Areas: Nationwide (USA)
+Main Office: San Francisco, CA
+
+Business Hours:
+- Phone Support: Monday-Friday, 9am - 5pm EST
+- Email Support: 24/7
+
+Contact Methods:
+- Phone: (555) 123-4567
+- Email: support@listhook.com
+- Legal: legal@listhook.com
+- Privacy: privacy@listhook.com
+- Address: 123 Business Ave, San Francisco, CA 94107

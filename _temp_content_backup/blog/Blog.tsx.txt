@@ -1,0 +1,283 @@
+===============================================
+CONTENT EXTRACTION: Blog.tsx
+===============================================
+FILE PATH: /Users/Grant.Eagon/Repos/listhook-site/src/pages/Blog.tsx
+EXTRACTION DATE: 2025-10-12
+
+===============================================
+1. BLOG POST STRUCTURE & LAYOUT
+===============================================
+
+Main Page Components:
+- Header section with title and description
+- Featured post section (displays first post marked as featured)
+- Grid layout for remaining posts (3 columns on large screens, 2 on medium, 1 on small)
+- Newsletter signup section at bottom
+
+Blog Post Card Structure:
+- Aspect ratio: 16:9 for images
+- Category badge (coral-500 color)
+- Read time indicator with clock icon
+- Title (bold, blue-900)
+- Excerpt text
+- Author info with user icon
+- Publication date
+- Hover effects on cards
+
+Featured Post Layout:
+- Larger card with same structure but more prominent display
+- Image: aspect-[16/9]
+- Title: text-2xl (larger than regular posts)
+
+Regular Post Layout:
+- Smaller cards in grid
+- Image: aspect-[16/9]
+- Title: text-xl
+- Excerpt: line-clamp-2 (truncated to 2 lines)
+
+===============================================
+2. EXISTING BLOG POSTS & SAMPLE CONTENT
+===============================================
+
+POST 1 (Featured):
+Title: The 2024 Study: Why Real Estate Postcards Outperform Digital Marketing
+Excerpt: Comprehensive analysis of direct mail ROI vs digital channels, with data from 10,000+ real estate campaigns.
+Author: Dr. Michael Rodriguez
+Date: 2024-01-20
+Read Time: 8 min read
+Slug: postcard-marketing-roi-study-2024
+Category: Research
+Featured: true
+Image: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 2:
+Title: The Complete Guide to Real Estate Postcard Marketing in 2024
+Excerpt: Everything you need to know about using postcards to generate quality real estate leads consistently.
+Author: Sarah Chen
+Date: 2024-01-15
+Read Time: 12 min read
+Slug: complete-guide-real-estate-postcards
+Category: Strategy
+Featured: false
+Image: https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 3:
+Title: 10 Lead Generation Strategies That Actually Work in 2024
+Excerpt: Proven tactics to generate high-quality real estate leads without breaking the bank.
+Author: Jennifer Smith
+Date: 2024-01-10
+Read Time: 7 min read
+Slug: lead-generation-strategies-2024
+Category: Lead Generation
+Featured: false
+Image: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 4:
+Title: Market Analysis: What Drives Real Estate Lead Conversion
+Excerpt: Deep dive into the factors that turn prospects into clients in today's market.
+Author: Mike Johnson
+Date: 2024-01-05
+Read Time: 9 min read
+Slug: market-analysis-lead-conversion
+Category: Market Analysis
+Featured: false
+Image: https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 5:
+Title: Building Your Personal Brand as a Real Estate Agent
+Excerpt: Step-by-step guide to creating a memorable brand that attracts your ideal clients.
+Author: Lisa Davis
+Date: 2023-12-28
+Read Time: 6 min read
+Slug: building-personal-brand-real-estate
+Category: Branding
+Featured: false
+Image: https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 6:
+Title: The Psychology of Real Estate Marketing
+Excerpt: Understanding buyer and seller psychology to create more effective marketing campaigns.
+Author: Dr. Amanda Wilson
+Date: 2023-12-20
+Read Time: 11 min read
+Slug: psychology-real-estate-marketing
+Category: Psychology
+Featured: false
+Image: https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 7:
+Title: Neighborhood Farming: The Ultimate Guide
+Excerpt: Master the art of geographic farming to become the go-to agent in your area.
+Author: Tom Anderson
+Date: 2023-12-15
+Read Time: 10 min read
+Slug: neighborhood-farming-ultimate-guide
+Category: Farming
+Featured: false
+Image: https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 8:
+Title: Using Data to Optimize Your Marketing Campaigns
+Excerpt: Leverage analytics and metrics to improve your marketing ROI and lead quality.
+Author: Sarah Chen
+Date: 2023-12-10
+Read Time: 8 min read
+Slug: data-optimize-marketing-campaigns
+Category: Analytics
+Featured: false
+Image: https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+POST 9:
+Title: The 80/20 Rule for Real Estate Marketing
+Excerpt: Focus on the 20% of marketing activities that generate 80% of your results.
+Author: Mike Johnson
+Date: 2023-12-01
+Read Time: 5 min read
+Slug: 80-20-rule-real-estate-marketing
+Category: Strategy
+Featured: false
+Image: https://images.unsplash.com/photo-1590021870406-c586e415fe95?w=600&h=400&fit=crop&crop=entropy&auto=format
+
+===============================================
+3. CATEGORY INFORMATION
+===============================================
+
+Categories Used:
+1. Research
+2. Strategy (2 posts)
+3. Lead Generation
+4. Market Analysis
+5. Branding
+6. Psychology
+7. Farming
+8. Analytics
+
+Category Display:
+- Text color: coral-500
+- Font weight: medium
+- Font size: text-sm
+- Displayed as badge on each post card
+
+===============================================
+4. AUTHOR INFORMATION
+===============================================
+
+Authors Featured:
+1. Dr. Michael Rodriguez - Research author
+2. Sarah Chen - Multiple posts (Strategy, Analytics)
+3. Jennifer Smith - Lead Generation
+4. Mike Johnson - Multiple posts (Market Analysis, Strategy)
+5. Lisa Davis - Branding
+6. Dr. Amanda Wilson - Psychology
+7. Tom Anderson - Farming
+
+Author Display:
+- Icon: User icon from lucide-react
+- Icon size: 16px
+- Text color: gray-600
+- Font size: text-sm
+- Displayed alongside publication date
+
+===============================================
+5. BLOG LISTING FORMAT
+===============================================
+
+Page Layout:
+- Container: max-width container with responsive padding
+- Background: gray-50
+- Padding: pt-32 pb-20 (top padding accounts for fixed header)
+
+Header Section:
+- Max width: 3xl
+- Centered text alignment
+- Title: "Real Estate Marketing Insights"
+  - Size: text-4xl
+  - Weight: bold
+  - Color: blue-900
+- Subtitle: "Expert tips and strategies to help you generate more leads and win more listings."
+  - Size: text-xl
+  - Color: gray-600
+
+Featured Post Section:
+- Displayed in separate section above grid
+- Uses FeaturedPost component
+- Margin bottom: mb-12
+
+Post Grid Section:
+- Grid layout: grid md:grid-cols-2 lg:grid-cols-3
+- Gap: gap-8
+- Displays all non-featured posts
+
+Newsletter Section:
+- Background: blue-900
+- Border radius: rounded-2xl
+- Padding: p-12
+- Margin top: mt-16
+- Title: "Get Marketing Tips in Your Inbox"
+  - Color: white
+  - Size: text-3xl
+- Description text color: blue-100
+- Input field with flex layout
+- Subscribe button with ArrowRight icon
+
+Card Component:
+- Uses imported Card component with hover prop
+- Border: border-gray-100
+- Shadow: shadow-sm
+- Overflow: hidden
+- Links to: /blog/${post.slug}
+
+Typography:
+- Primary heading color: blue-900
+- Body text color: gray-600
+- Accent color: coral-500
+- Secondary text: gray-500
+
+Icons Used:
+- Clock (for read time)
+- User (for author)
+- ArrowRight (for newsletter button)
+
+All from lucide-react library
+
+===============================================
+6. TECHNICAL DETAILS
+===============================================
+
+TypeScript Interface:
+type BlogPost = {
+  id: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  slug: string;
+  category: string;
+  image: string;
+  featured: boolean;
+};
+
+Data Structure:
+- Posts stored in constant array: blogPosts: BlogPost[]
+- Featured post identified with featured: true flag
+- Routing uses slug field for URL generation
+
+Component Structure:
+1. FeaturedPost component (for featured post display)
+2. BlogPost component (for regular post cards)
+3. Main Blog component (page wrapper)
+
+React Hooks:
+- useEffect for setting document title
+- Link from react-router-dom for navigation
+
+Responsive Design:
+- Mobile-first approach
+- Breakpoints: sm, md, lg
+- Flexible grid that adjusts from 1 to 3 columns
+- Responsive padding and spacing
+
+===============================================
+END OF EXTRACTION
+===============================================

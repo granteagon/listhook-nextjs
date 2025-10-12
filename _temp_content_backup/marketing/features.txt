@@ -1,0 +1,175 @@
+====================================
+FEATURES PAGE CONTENT EXTRACTION
+====================================
+
+=== PAGE TITLE ===
+Document Title: "Features - ListHook"
+
+=== HERO SECTION ===
+Main Headline: "Everything You Need to Win More Listings"
+Subtitle: "Powerful features designed specifically for real estate agents who want to grow their business through direct mail marketing."
+CTA: "Start Free Trial" (primary button) → /campaign/new
+
+=== PRIMARY FEATURES (3 main features) ===
+
+1. Automated Postcards
+   Icon: Mail (lucide-react)
+   Description: "Create Just Listed & Just Sold postcards instantly from your MLS data. No design skills needed."
+
+2. QR Code Tracking
+   Icon: QrCode (lucide-react)
+   Description: "Generate unique QR codes and landing pages for each campaign. Track scans and capture leads automatically."
+
+3. Sphere & Farm Campaigns
+   Icon: Users (lucide-react)
+   Description: "Target your sphere of influence or farm specific neighborhoods with personalized campaigns."
+
+=== FEATURE HIGHLIGHT SECTION ===
+Headline: "Turn Your Listings Into More Listings"
+
+Description: "ListHook automates the 20% of marketing that yields 80% of results. Our platform handles everything from design to delivery, so you can focus on what matters most - closing deals."
+
+Key Benefits (bulleted with coral dots):
+- Automated campaign creation from MLS data
+- Professional templates designed for conversion
+- Digital tracking with physical mail impact
+
+Image: Dashboard screenshot
+Alt text: "ListHook Dashboard"
+Source: https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg
+
+Background: Blue-900 with white text
+
+=== ADDITIONAL FEATURES (6 secondary features) ===
+
+1. Smart Targeting
+   Icon: Target (lucide-react)
+   Description: "Automatically select the optimal radius around your listings based on neighborhood demographics."
+
+2. ROI Analytics
+   Icon: ChartBar (lucide-react)
+   Description: "Track campaign performance, lead generation, and return on investment in real-time."
+
+3. Automated Timing
+   Icon: Clock (lucide-react)
+   Description: "Schedule campaigns to hit mailboxes at the perfect time based on market data."
+
+4. Compliance Ready
+   Icon: Shield (lucide-react)
+   Description: "All templates are reviewed by legal experts and comply with real estate regulations."
+
+5. Instant Setup
+   Icon: Zap (lucide-react)
+   Description: "Connect your MLS and start your first campaign in under 5 minutes."
+
+6. Brand Consistency
+   Icon: Palette (lucide-react)
+   Description: "Maintain your brand identity across all campaigns with custom templates."
+
+=== SECTION HEADING ===
+"Powerful Features for Modern Agents"
+
+=== CTA SECTION ===
+Headline: "Ready to Get More Listings?"
+Subtitle: "Join successful agents who are growing their business with ListHook."
+
+CTAs:
+1. "Start Free Trial" (primary button) → /campaign/new
+2. "View Pricing" (outline button) → /pricing
+
+=== COMPONENT STRUCTURE ===
+
+FeatureCard Component:
+- Card wrapper with hover effect
+- Icon in blue-50 circular background (w-12 h-12)
+- Icon color: text-blue-700
+- Title: text-xl font-semibold text-blue-900
+- Description: text-gray-600 leading-relaxed
+- Padding: p-8
+
+Layout:
+- Primary features: 3-column grid (md:grid-cols-3)
+- Additional features: 3-column grid (md:grid-cols-3)
+- Gap: gap-8 between cards
+- Container: max-w container with responsive padding
+
+=== COLOR SCHEME ===
+- Primary text: Blue-900
+- Icon color: Blue-700
+- Icon background: Blue-50
+- Accent: Coral (for bullets)
+- Card background: White
+- Page background: White
+- Feature highlight section: Blue-900 background
+- Text on dark: White and Blue-100
+
+=== TYPOGRAPHY ===
+- H1: text-4xl font-bold
+- H2: text-3xl font-bold
+- H3 (card titles): text-xl font-semibold
+- Body text: text-xl for subtitles, standard for descriptions
+- Line height: leading-relaxed for readability
+
+=== ICON USAGE ===
+All icons from lucide-react library:
+- Mail (postcards/email)
+- QrCode (tracking)
+- Users (sphere/farm)
+- Target (targeting)
+- ChartBar (analytics)
+- Clock (timing)
+- Shield (compliance)
+- Zap (speed/instant)
+- Palette (branding/design)
+
+Icon size: 24px throughout
+
+=== KEY ROUTES ===
+- /campaign/new (Start Free Trial)
+- /pricing (View Pricing)
+
+=== VALUE PROPOSITIONS ===
+1. No design skills needed - instant creation from MLS data
+2. Automated lead capture through QR codes
+3. Targeted marketing to sphere and farm areas
+4. AI-powered demographic targeting
+5. Real-time ROI tracking
+6. Market-based timing optimization
+7. Legal compliance built-in
+8. 5-minute setup time
+9. Brand consistency across campaigns
+10. 80/20 principle - automate the 20% that yields 80% of results
+
+=== UNIQUE SELLING POINTS ===
+- "Everything from design to delivery"
+- "Focus on what matters most - closing deals"
+- "Optimal radius based on neighborhood demographics"
+- "Perfect time based on market data"
+- "Legal experts reviewed templates"
+- "Under 5 minutes" setup
+- "Professional templates designed for conversion"
+
+=== IMAGE REFERENCES ===
+Single dashboard image showing the ListHook interface:
+- Pexels stock photo: pexels-photo-8293778.jpeg
+- Used in the feature highlight section
+- Shows workspace/dashboard environment
+- Rounded corners (rounded-lg)
+- Shadow effect (shadow-xl)
+
+=== LAYOUT PATTERNS ===
+1. Hero: Centered text + CTA
+2. Primary Features: 3-column card grid
+3. Feature Highlight: 2-column layout (text + image) on dark background
+4. Additional Features: 3-column card grid
+5. CTA: Centered text + dual CTAs
+
+=== STYLING DETAILS ===
+- Card hover effects: hover prop on Card component
+- Rounded corners: rounded-2xl for sections, rounded-full for icon backgrounds
+- Spacing: py-20 for sections, p-8 for cards
+- Shadows: shadow-xl for depth
+- Backgrounds: Alternating white and blue-900
+- Max-width: max-w-3xl for centered content
+- Responsive design: sm: and lg: breakpoints for padding
+- Grid gaps: gap-8 consistent throughout

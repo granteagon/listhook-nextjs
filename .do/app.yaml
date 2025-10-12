@@ -4,7 +4,7 @@ region: nyc
 services:
   - name: web
     github:
-      repo: YOUR_GITHUB_USERNAME/listhook-nextjs
+      repo: granteagon/listhook-nextjs
       branch: main
       deploy_on_push: true
 

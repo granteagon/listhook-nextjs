@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { blogPosts, getAllBlogSlugs } from '@/data/blogPosts';
+import { blogPosts } from '@/data/blogPosts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://listhook.com';

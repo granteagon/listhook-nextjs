@@ -2,8 +2,6 @@ import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Validation schema matching the frontend
 const contactFormSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -15,6 +13,9 @@ const contactFormSchema = z.object({
 
 export async function POST(request: Request) {
   try {
+    // Initialize Resend client
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     // Parse and validate request body
     const body = await request.json();
     const validatedData = contactFormSchema.parse(body);
@@ -164,7 +165,7 @@ Reply directly to this email to contact ${name}.
     // Handle validation errors
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: 'Invalid form data', details: error.errors },
+        { error: 'Invalid form data', details: error.issues },
         { status: 400 }
       );
     }

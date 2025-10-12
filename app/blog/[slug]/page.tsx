@@ -6,7 +6,7 @@ import { getBlogPost, getAllBlogSlugs } from "@/data/blogPosts";
 import type { ReactElement } from "react";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getBlogPost(params.slug);
+  const { slug } = await params;
+  const post = getBlogPost(slug);
 
   if (!post) {
     return {
@@ -106,8 +107,9 @@ function parseContent(content: string) {
   return elements;
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getBlogPost(params.slug);
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
 
   if (!post) {
     notFound();

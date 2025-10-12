@@ -150,7 +150,7 @@ export default function ContactPage() {
                         className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
                           errors.phone ? 'border-red-500' : 'border-gray-300'
                         }`}
-                        placeholder="(555) 123-4567"
+                        placeholder="(843) 410-8360"
                       />
                       {errors.phone && (
                         <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -234,8 +234,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                        <a href="tel:+15551234567" className="text-blue-600 hover:underline">
-                          (555) 123-4567
+                        <a href="tel:+18434108360" className="text-blue-600 hover:underline">
+                          (843) 410-8360
                         </a>
                       </div>
                     </div>

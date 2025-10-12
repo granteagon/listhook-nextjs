@@ -34,8 +34,8 @@ export default function TwilioVerificationPage() {
             </p>
             <p className="text-gray-700">
               <strong>Phone:</strong>{' '}
-              <a href="tel:+15551234567" className="text-blue-600 hover:text-blue-800 underline">
-                (555) 123-4567
+              <a href="tel:+18434108360" className="text-blue-600 hover:text-blue-800 underline">
+                (843) 410-8360
               </a>
             </p>
           </div>
@@ -124,8 +124,8 @@ export default function TwilioVerificationPage() {
                   support@listhook.com
                 </a>{' '}
                 or calling{' '}
-                <a href="tel:+15551234567" className="text-blue-600 hover:text-blue-800 underline">
-                  (555) 123-4567
+                <a href="tel:+18434108360" className="text-blue-600 hover:text-blue-800 underline">
+                  (843) 410-8360
                 </a>.
               </p>
               <p>
@@ -162,8 +162,8 @@ export default function TwilioVerificationPage() {
               </li>
               <li>
                 <strong>Phone Support:</strong>{' '}
-                <a href="tel:+15551234567" className="text-blue-600 hover:text-blue-800 underline">
-                  (555) 123-4567
+                <a href="tel:+18434108360" className="text-blue-600 hover:text-blue-800 underline">
+                  (843) 410-8360
                 </a>
               </li>
             </ul>

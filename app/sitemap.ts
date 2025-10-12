@@ -67,10 +67,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/twilio-verification`,
+      url: `${baseUrl}/sms-terms`,
       lastModified: new Date(),
       changeFrequency: 'yearly' as const,
-      priority: 0.2,
+      priority: 0.3,
     },
   ];
 

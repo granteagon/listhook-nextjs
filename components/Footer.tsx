@@ -18,7 +18,7 @@ export default function Footer() {
     { href: '/terms', label: 'Terms' },
     { href: '/privacy', label: 'Privacy' },
     { href: '/cookies', label: 'Cookies' },
-    { href: '/twilio-verification', label: 'Twilio Verification' }
+    { href: '/sms-terms', label: 'SMS Terms' }
   ];
 
   const socialLinks = [

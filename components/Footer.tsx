@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Container from './ui/Container';
+import Logo from './ui/Logo';
 
 export default function Footer() {
   const productLinks = [
@@ -35,8 +36,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <Link href="/" className="inline-block mb-4">
-                <div className="text-2xl font-bold text-white">
+              <Link href="/" className="inline-flex items-center space-x-2 mb-4 text-white">
+                <Logo className="w-8 h-8" />
+                <div className="text-2xl font-bold">
                   ListHook
                 </div>
               </Link>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Button from './ui/Button';
 import Container from './ui/Container';
+import Logo from './ui/Logo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,8 +38,9 @@ export default function Header() {
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-blue-600">
+          <Link href="/" className="flex items-center space-x-2 text-blue-600">
+            <Logo className="w-8 h-8" />
+            <div className="text-2xl font-bold">
               ListHook
             </div>
           </Link>

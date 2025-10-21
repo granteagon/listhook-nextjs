@@ -191,6 +191,33 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </article>
 
+        {/* ListHook CTA */}
+        <div className="bg-gradient-to-r from-coral-500 to-coral-600 rounded-xl p-8 text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Stop Paying Zillow to Steal Your Leads
+          </h2>
+          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+            Build your own pipeline with automated postcards that market YOU, not them. $1.50 per card. 100% lead ownership. Instant notifications when prospects engage.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/campaigns"
+              className="px-8 py-3 bg-white text-coral-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2"
+            >
+              See Campaign Examples
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              href="/contact"
+              className="px-8 py-3 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors"
+            >
+              Schedule a Strategy Call
+            </Link>
+          </div>
+        </div>
+
         {/* Newsletter CTA */}
         <div className="bg-blue-900 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold text-white mb-3">

@@ -20,13 +20,12 @@ export default function Header() {
   }, []);
 
   const navigationLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/features', label: 'Features' },
     { href: '/how-it-works', label: 'How It Works' },
-    { href: '/pricing', label: 'Pricing' },
+    { href: '/campaigns', label: 'Campaign Examples' },
+    { href: '/why-listhook', label: 'Why ListHook' },
     { href: '/success-stories', label: 'Success Stories' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' }
+    { href: '/blog', label: 'Resources' },
+    { href: '/contact', label: 'Contact Sales' }
   ];
 
   return (

@@ -4,15 +4,15 @@ import Logo from './ui/Logo';
 
 export default function Footer() {
   const productLinks = [
-    { href: '/features', label: 'Features' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/how-it-works', label: 'How It Works' }
+    { href: '/how-it-works', label: 'How It Works' },
+    { href: '/campaigns', label: 'Campaign Examples' },
+    { href: '/why-listhook', label: 'Why ListHook' },
+    { href: '/blog', label: 'Resources' }
   ];
 
   const companyLinks = [
-    { href: '/about', label: 'About' },
     { href: '/success-stories', label: 'Success Stories' },
-    { href: '/contact', label: 'Contact' }
+    { href: '/contact', label: 'Contact Sales' }
   ];
 
   const legalLinks = [

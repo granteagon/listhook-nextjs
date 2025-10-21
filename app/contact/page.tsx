@@ -71,10 +71,10 @@ export default function ContactPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-900">
-              Get In Touch With Our Team
+              Ready to Take Back Control of Your Marketing?
             </h1>
             <p className="text-xl text-gray-600">
-              Have questions about ListHook? We're here to help you automate your real estate marketing.
+              Talk to our team about building a campaign for your market. No obligations. No pressure. Just a real conversation about how postcards can build your pipeline.
             </p>
           </div>
         </Container>
@@ -205,6 +205,36 @@ export default function ContactPage() {
                   </form>
                 </CardContent>
               </Card>
+
+              {/* Trust Builders */}
+              <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm font-medium">No setup fees</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm font-medium">Cancel anytime</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm font-medium">You control the budget</span>
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-sm font-medium">First strategy consultation free</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Information Sidebar */}

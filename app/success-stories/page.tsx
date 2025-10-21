@@ -16,407 +16,722 @@ export default function SuccessStoriesPage() {
         <Container className="relative">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-8 inline-flex items-center rounded-full bg-blue-800/50 px-4 py-2 text-sm font-medium text-blue-100 ring-1 ring-inset ring-blue-700/50">
-              500+ agents have transformed their marketing
+              Real transformation stories from agents like you
             </div>
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Real Agents, Real Results, Real Stories
+              Real Agents. Real Results. Real ROI.
             </h1>
             <p className="mb-8 text-xl text-blue-100">
-              See how agents just like you transformed their marketing from a source of stress into a reliable lead generation machine. These are their stories.
+              These agents were frustrated with expensive Zillow leads and inconsistent marketing. Here&apos;s what happened when they took back control.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Too Busy To Market - Empathy Section */}
-      <section className="border-b border-gray-200 bg-gray-50 py-16 sm:py-24">
+      {/* Case Study 1: From Zillow Dependency to Pipeline Ownership */}
+      <section className="border-b border-gray-200 py-16 sm:py-24">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              You're Not Lazy, You're Just Busy
-            </h2>
-            <p className="mb-12 text-xl text-gray-600">
-              Between showings, contracts, and client calls, when exactly are you supposed to design postcards? We get it. That's why we built this.
-            </p>
-          </div>
-
-          {/* A Day in the Life Timeline */}
           <div className="mx-auto max-w-4xl">
-            <h3 className="mb-8 text-center text-2xl font-semibold text-gray-900">
-              Sound Familiar?
-            </h3>
-            <p className="mb-12 text-center text-gray-600">
-              We surveyed 1,000+ real estate agents. Here's what a typical day looks like...
-            </p>
+            <div className="mb-8">
+              <div className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-800">
+                Case Study #1
+              </div>
+              <h2 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                From Zillow Dependency to Pipeline Ownership
+              </h2>
+              <div className="text-lg text-gray-600">
+                <div className="font-semibold">Jessica Martinez</div>
+                <div>Phoenix, AZ • 5 years experience</div>
+              </div>
+            </div>
 
             <div className="space-y-8">
-              <div className="flex gap-6 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex-shrink-0 text-4xl">🌅</div>
-                <div>
-                  <div className="mb-2 font-semibold text-gray-900">7:00 AM - Morning</div>
-                  <p className="mb-2 text-gray-700 italic">
-                    "Coffee in hand, I'm already reviewing contracts. First showing at 8:30. Maybe I'll work on marketing tonight..."
-                  </p>
-                  <p className="text-sm text-gray-600">Your day starts with a listing appointment</p>
+              {/* The Problem */}
+              <div className="rounded-xl border border-red-200 bg-red-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-red-900">The Problem</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• $2,000/month on Zillow Premier Agent</li>
+                  <li>• Only 2 deals per year from portal leads</li>
+                  <li>• Shared leads with 3-4 other agents</li>
+                  <li>• Zero brand recognition in her market</li>
+                  <li>• No control over lead quality or timing</li>
+                </ul>
+              </div>
+
+              {/* The Strategy */}
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-blue-900">The Strategy</h3>
+                <p className="mb-4 text-gray-700">
+                  Target 600 homes in her farm area with quarterly mailings using Just Listed and market update postcards.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <div className="text-sm text-gray-600">Target homes:</div>
+                    <div className="text-2xl font-bold text-gray-900">600</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Mailings per year:</div>
+                    <div className="text-2xl font-bold text-gray-900">4</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex gap-6 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex-shrink-0 text-4xl">☀️</div>
-                <div>
-                  <div className="mb-2 font-semibold text-gray-900">12:00 PM - Midday</div>
-                  <p className="mb-2 text-gray-700 italic">
-                    "Three showings done, 47 emails answered, two offers to write. Marketing? What marketing?"
-                  </p>
-                  <p className="text-sm text-gray-600">By noon, you've shown 3 homes and answered 47 emails</p>
+              {/* The Campaign */}
+              <div className="rounded-xl border border-purple-200 bg-purple-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-purple-900">The Campaign</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <div className="text-sm text-gray-600">Postcards/year:</div>
+                    <div className="text-2xl font-bold text-gray-900">2,400</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Annual cost:</div>
+                    <div className="text-2xl font-bold text-gray-900">$3,600</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Monthly cost:</div>
+                    <div className="text-2xl font-bold text-green-700">$300</div>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex gap-6 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex-shrink-0 text-4xl">🌆</div>
-                <div>
-                  <div className="mb-2 font-semibold text-gray-900">7:00 PM - Evening</div>
-                  <p className="mb-2 text-gray-700 italic">
-                    "Finally home. Kids need dinner, spouse wants to talk. Marketing can wait until tomorrow... again."
-                  </p>
-                  <p className="text-sm text-gray-600">Evening comes, and you still haven't touched your marketing</p>
+              {/* The Results */}
+              <div className="rounded-xl border border-green-200 bg-green-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-green-900">The Results (First 6 Months)</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-4">
+                  <div>
+                    <div className="text-sm text-gray-600">QR scans:</div>
+                    <div className="text-2xl font-bold text-gray-900">18</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Appointments:</div>
+                    <div className="text-2xl font-bold text-gray-900">5</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Listings:</div>
+                    <div className="text-2xl font-bold text-gray-900">2</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Buyer clients:</div>
+                    <div className="text-2xl font-bold text-gray-900">1</div>
+                  </div>
+                </div>
+                <div className="mb-6 border-t border-green-300 pt-6">
+                  <div className="text-sm text-gray-600">Total commissions earned:</div>
+                  <div className="text-4xl font-bold text-green-700">$48,000</div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* The Problem & Solution */}
-          <div className="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
-            <div className="rounded-lg border border-red-200 bg-red-50 p-8">
-              <h3 className="mb-6 text-xl font-semibold text-red-900">The Problem:</h3>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex gap-3">
-                  <span className="text-red-600">✗</span>
-                  <div>
-                    <div className="font-medium">Marketing gets pushed to "tomorrow"</div>
-                    <div className="text-sm text-gray-600">Every day something 'urgent' takes priority</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-red-600">✗</span>
-                  <div>
-                    <div className="font-medium">Guilt about inconsistent outreach</div>
-                    <div className="text-sm text-gray-600">You know you should be farming, but when?</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-red-600">✗</span>
-                  <div>
-                    <div className="font-medium">Feast or famine income cycles</div>
-                    <div className="text-sm text-gray-600">Busy closing → stop prospecting → no leads</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-red-600">✗</span>
-                  <div>
-                    <div className="font-medium">No time to learn new systems</div>
-                    <div className="text-sm text-gray-600">Complex tools just add more to your plate</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+              {/* The Quote */}
+              <blockquote className="border-l-4 border-blue-600 bg-white p-6 text-lg italic text-gray-700 shadow-md">
+                &quot;Getting that text alert when someone scans my postcard QR code is addictive. I know exactly where they live and what triggered their interest. I&apos;ve cut my Zillow budget to $500 and might eliminate it entirely.&quot;
+                <div className="mt-4 text-sm font-semibold not-italic text-gray-900">— Jessica Martinez</div>
+              </blockquote>
 
-            <div className="rounded-lg border border-green-200 bg-green-50 p-8">
-              <h3 className="mb-6 text-xl font-semibold text-green-900">What You Need:</h3>
-              <ul className="space-y-4 text-gray-700">
-                <li className="flex gap-3">
-                  <span className="text-green-600">✓</span>
-                  <div>
-                    <div className="font-medium">Marketing that happens automatically</div>
-                    <div className="text-sm text-gray-600">No thinking, no remembering, just results</div>
+              {/* The Math */}
+              <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg">
+                <h3 className="mb-6 text-xl font-bold text-gray-900">The Math: ListHook vs. Zillow</h3>
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-6">
+                    <div className="mb-4 font-semibold text-gray-900">Zillow (6 months)</div>
+                    <div className="mb-2 text-sm text-gray-600">Investment:</div>
+                    <div className="mb-4 text-2xl font-bold text-red-700">$12,000</div>
+                    <div className="mb-2 text-sm text-gray-600">Typical return (1 deal):</div>
+                    <div className="mb-4 text-2xl font-bold text-gray-900">$25,000</div>
+                    <div className="mb-2 text-sm text-gray-600">ROI:</div>
+                    <div className="text-3xl font-bold text-gray-700">2.1x</div>
                   </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-green-600">✓</span>
-                  <div>
-                    <div className="font-medium">No daily effort required</div>
-                    <div className="text-sm text-gray-600">Set it once, let it run forever</div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-6">
+                    <div className="mb-4 font-semibold text-green-900">ListHook (6 months)</div>
+                    <div className="mb-2 text-sm text-gray-600">Investment:</div>
+                    <div className="mb-4 text-2xl font-bold text-green-700">$1,800</div>
+                    <div className="mb-2 text-sm text-gray-600">Actual return:</div>
+                    <div className="mb-4 text-2xl font-bold text-gray-900">$48,000</div>
+                    <div className="mb-2 text-sm text-gray-600">ROI:</div>
+                    <div className="text-3xl font-bold text-green-700">26.7x</div>
                   </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-green-600">✓</span>
-                  <div>
-                    <div className="font-medium">Proven results you can trust</div>
-                    <div className="text-sm text-gray-600">340% average ROI from day one</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-green-600">✓</span>
-                  <div>
-                    <div className="font-medium">Simple setup, complex results</div>
-                    <div className="text-sm text-gray-600">5-minute setup, lifetime of leads</div>
-                  </div>
-                </li>
-              </ul>
+                </div>
+                <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4 text-center">
+                  <div className="text-sm text-gray-600">ROI Improvement:</div>
+                  <div className="text-2xl font-bold text-blue-900">12.7x better than Zillow</div>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Success Story Categories */}
-      <section className="py-16 sm:py-24">
-        <Container>
-          <div className="mx-auto mb-16 max-w-3xl text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Success Stories by Agent Type
-            </h2>
-            <p className="text-xl text-gray-600">
-              No matter where you are in your career, agents like you are seeing results
-            </p>
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-3">
-            {/* New Agents */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-lg">
-              <div className="mb-6">
-                <div className="mb-2 inline-block rounded-lg bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-800">
-                  New Agent Success
-                </div>
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                  From 0 to 5 Listings in 6 Months
-                </h3>
-                <div className="text-gray-600">
-                  <div className="font-semibold">Sarah M. - First Year Agent</div>
-                  <div className="text-sm">Austin, TX • Licensed January 2024</div>
-                </div>
-              </div>
-
-              <div className="mb-6 space-y-4">
-                <div>
-                  <div className="mb-2 font-semibold text-gray-900">Before:</div>
-                  <ul className="space-y-1 text-sm text-gray-600">
-                    <li>• No marketing budget, afraid to spend money</li>
-                    <li>• Relying only on friends and family referrals</li>
-                    <li>• Constant worry about where the next deal would come from</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="mb-2 font-semibold text-green-700">Results:</div>
-                  <ul className="space-y-1 text-sm text-gray-700">
-                    <li>• 5 listings from postcard leads</li>
-                    <li>• $47,000 in commissions from just $340 in postcards</li>
-                    <li>• <strong className="text-green-700">1,385% ROI</strong> in first 6 months</li>
-                  </ul>
-                </div>
-              </div>
-
-              <blockquote className="border-l-4 border-blue-600 bg-blue-50 p-4 text-sm italic text-gray-700">
-                "I was terrified to spend money on marketing. This gave me confidence because it was so affordable and actually worked. Now I have a predictable lead source!"
-              </blockquote>
-            </div>
-
-            {/* Busy Agents */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-lg">
-              <div className="mb-6">
-                <div className="mb-2 inline-block rounded-lg bg-purple-100 px-3 py-1 text-sm font-semibold text-purple-800">
-                  Busy Agent Success
-                </div>
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                  From Overwhelmed to Organized
-                </h3>
-                <div className="text-gray-600">
-                  <div className="font-semibold">Mike R. - 8 Years Experience</div>
-                  <div className="text-sm">Denver, CO • 25-30 transactions/year</div>
-                </div>
-              </div>
-
-              <div className="mb-6 space-y-4">
-                <div>
-                  <div className="mb-2 font-semibold text-gray-900">Before:</div>
-                  <ul className="space-y-1 text-sm text-gray-600">
-                    <li>• Too busy closing deals to market consistently</li>
-                    <li>• Feast or famine cycles</li>
-                    <li>• Constant guilt about neglecting his farm area</li>
-                    <li>• Marketing felt like another job</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="mb-2 font-semibold text-green-700">Results:</div>
-                  <ul className="space-y-1 text-sm text-gray-700">
-                    <li>• Steady 2-3 leads per month without thinking about it</li>
-                    <li>• No more marketing guilt</li>
-                    <li>• Predictable pipeline that feeds his busy practice</li>
-                  </ul>
-                </div>
-              </div>
-
-              <blockquote className="border-l-4 border-purple-600 bg-purple-50 p-4 text-sm italic text-gray-700">
-                "Finally, marketing that happens without me thinking about it. My farm area knows me now, and I'm not stressed about where the next deal comes from!"
-              </blockquote>
-            </div>
-
-            {/* Top Producers */}
-            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-lg">
-              <div className="mb-6">
-                <div className="mb-2 inline-block rounded-lg bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-800">
-                  Top Producer Success
-                </div>
-                <h3 className="mb-2 text-2xl font-bold text-gray-900">
-                  From Good ROI to Great ROI
-                </h3>
-                <div className="text-gray-600">
-                  <div className="font-semibold">Jennifer L. - Top 1%</div>
-                  <div className="text-sm">Phoenix, AZ • 75+ transactions/year</div>
-                </div>
-              </div>
-
-              <div className="mb-6 space-y-4">
-                <div>
-                  <div className="mb-2 font-semibold text-gray-900">Before:</div>
-                  <ul className="space-y-1 text-sm text-gray-600">
-                    <li>• Expensive marketing agencies with generic campaigns</li>
-                    <li>• Hard to track ROI</li>
-                    <li>• Paying $2,000/month for unclear results</li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div className="mb-2 font-semibold text-green-700">Results:</div>
-                  <ul className="space-y-1 text-sm text-gray-700">
-                    <li>• Cut marketing costs 60%</li>
-                    <li>• Increased response rates 3x</li>
-                    <li>• Better lead quality</li>
-                    <li>• Now spending <strong className="text-green-700">$800/month</strong> for better results</li>
-                  </ul>
-                </div>
-              </div>
-
-              <blockquote className="border-l-4 border-amber-600 bg-amber-50 p-4 text-sm italic text-gray-700">
-                "Smart targeting beats expensive broad campaigns every time. This is surgical precision. I know exactly what I'm getting for my investment."
-              </blockquote>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Deep Dive Case Study: Elena */}
-      <section className="border-y border-gray-200 bg-gradient-to-br from-gray-50 to-white py-16 sm:py-24">
+      {/* Case Study 2: Building a Sphere Campaign */}
+      <section className="border-b border-gray-200 bg-gray-50 py-16 sm:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <div className="mb-12 text-center">
-              <div className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-800">
-                Deep Dive Case Study
+            <div className="mb-8">
+              <div className="mb-4 inline-block rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-purple-800">
+                Case Study #2
               </div>
-              <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                How Elena Went from Stressed to Successful
+              <h2 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Building a Sphere Campaign from Scratch
               </h2>
-              <p className="text-lg text-gray-600">
-                Mid-career agent, 4 years experience, competitive suburban market in Charlotte, NC
-              </p>
+              <div className="text-lg text-gray-600">
+                <div className="font-semibold">David Chen</div>
+                <div>Seattle, WA • New agent (6 months licensed)</div>
+              </div>
             </div>
 
-            {/* Before: The Struggle */}
-            <div className="mb-12 rounded-xl border border-red-200 bg-white p-8 shadow-lg">
-              <h3 className="mb-6 text-2xl font-bold text-red-900">Before: The Struggle</h3>
-              <ul className="mb-6 space-y-4">
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-red-600">✗</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Inconsistent marketing efforts</div>
-                    <div className="text-sm text-gray-600">Would send postcards when she remembered, then stop for months</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-red-600">✗</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Wasting money on generic mailers</div>
-                    <div className="text-sm text-gray-600">$300/month on broad neighborhood mailings with poor targeting</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-red-600">✗</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Terrible response rates</div>
-                    <div className="text-sm text-gray-600">Getting 0-1 responses per 500-piece campaign</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-red-600">✗</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Losing to competitors</div>
-                    <div className="text-sm text-gray-600">Other agents in her area were getting the listings she wanted</div>
-                  </div>
-                </li>
-              </ul>
-              <blockquote className="border-l-4 border-red-600 bg-red-50 p-4 italic text-gray-700">
-                "I was ready to give up on direct mail completely. Nothing was working and I couldn't afford to keep throwing money away. I felt like marketing was just this mysterious thing I'd never figure out."
-              </blockquote>
-            </div>
+            <div className="space-y-8">
+              {/* The Problem */}
+              <div className="rounded-xl border border-red-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-red-900">The Problem</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Brand new license with zero marketing budget</li>
+                  <li>• 200 contacts but no systematic way to stay in touch</li>
+                  <li>• Friends don&apos;t know he&apos;s in real estate yet</li>
+                  <li>• Afraid of being &quot;too salesy&quot; with sphere</li>
+                  <li>• Competitors already farming his neighborhood</li>
+                </ul>
+              </div>
 
-            {/* After: The Transformation */}
-            <div className="mb-12 rounded-xl border border-green-200 bg-white p-8 shadow-lg">
-              <h3 className="mb-6 text-2xl font-bold text-green-900">After: The Transformation</h3>
-              <ul className="mb-6 space-y-4">
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-green-600">✓</span>
+              {/* The Strategy */}
+              <div className="rounded-xl border border-blue-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-blue-900">The Strategy</h3>
+                <p className="mb-4 text-gray-700">
+                  Monthly &quot;Just Listed&quot; and market update postcards to his sphere of 200 contacts, plus their neighbors (expanding to 350 total households).
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <div className="font-semibold text-gray-900">Completely automated marketing</div>
-                    <div className="text-sm text-gray-600">Every listing automatically triggers smart postcard campaigns</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-green-600">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Better targeting, lower costs</div>
-                    <div className="text-sm text-gray-600">$150/month with AI-powered targeting to likely sellers</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-green-600">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">5x better response rates</div>
-                    <div className="text-sm text-gray-600">Getting 4-6 qualified leads per month consistently</div>
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="flex-shrink-0 text-green-600">✓</span>
-                  <div>
-                    <div className="font-semibold text-gray-900">Neighborhood recognition</div>
-                    <div className="text-sm text-gray-600">Homeowners now know her brand and call her first</div>
-                  </div>
-                </li>
-              </ul>
-              <blockquote className="border-l-4 border-green-600 bg-green-50 p-4 italic text-gray-700">
-                "Now marketing happens in the background while I focus on clients. I actually look forward to seeing my postcard stats because they're always good news. It's like having a marketing team that never sleeps."
-              </blockquote>
-            </div>
-
-            {/* 6-Month Results Timeline */}
-            <div className="rounded-xl border border-blue-200 bg-blue-50 p-8">
-              <h3 className="mb-6 text-2xl font-bold text-blue-900">6-Month Results Timeline</h3>
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-semibold">1-2</div>
+                    <div className="text-sm text-gray-600">Initial sphere:</div>
+                    <div className="text-2xl font-bold text-gray-900">200 contacts</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Month 1-2: Setup & Early Validation</div>
-                    <div className="text-sm text-gray-700">Setup complete, first campaigns sent, 2 leads</div>
+                    <div className="text-sm text-gray-600">Expanded reach:</div>
+                    <div className="text-2xl font-bold text-gray-900">350 homes</div>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white font-semibold">3-4</div>
+              </div>
+
+              {/* The Campaign */}
+              <div className="rounded-xl border border-purple-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-purple-900">The Campaign</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <div className="text-sm text-gray-600">Postcards/month:</div>
+                    <div className="text-2xl font-bold text-gray-900">350</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Month 3-4: First Win</div>
-                    <div className="text-sm text-gray-700">Consistent leads, first listing closed, $18K commission from first sale</div>
+                    <div className="text-sm text-gray-600">Monthly cost:</div>
+                    <div className="text-2xl font-bold text-green-700">$175</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Campaign type:</div>
+                    <div className="text-base font-semibold text-gray-900">Sphere nurture</div>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-600 text-white font-semibold">5-6</div>
+              </div>
+
+              {/* The Results */}
+              <div className="rounded-xl border border-green-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-green-900">The Results (First 4 Months)</h3>
+                <div className="space-y-4">
+                  <div className="rounded-lg bg-green-50 p-4">
+                    <div className="mb-2 font-semibold text-gray-900">Month 1-2: Brand Awareness</div>
+                    <div className="text-sm text-gray-700">
+                      12 phone calls from friends saying &quot;I didn&apos;t know you got your license!&quot;
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-green-50 p-4">
+                    <div className="mb-2 font-semibold text-gray-900">Month 3: First Referral</div>
+                    <div className="text-sm text-gray-700">
+                      College friend referred their neighbor looking to sell - $8,500 commission
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-green-50 p-4">
+                    <div className="mb-2 font-semibold text-gray-900">Month 4: Sphere Expansion</div>
+                    <div className="text-sm text-gray-700">
+                      Former coworker hired him to buy new home - $6,200 commission
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 border-t border-green-300 pt-6">
+                  <div className="text-sm text-gray-600">Total investment (4 months):</div>
+                  <div className="mb-4 text-2xl font-bold text-gray-900">$700</div>
+                  <div className="text-sm text-gray-600">Total commissions earned:</div>
+                  <div className="text-4xl font-bold text-green-700">$14,700</div>
+                </div>
+              </div>
+
+              {/* The Quote */}
+              <blockquote className="border-l-4 border-purple-600 bg-white p-6 text-lg italic text-gray-700 shadow-md">
+                &quot;I was afraid of being annoying, but people genuinely appreciate staying updated on the market. Now when someone in their network mentions real estate, I&apos;m the first person they think of.&quot;
+                <div className="mt-4 text-sm font-semibold not-italic text-gray-900">— David Chen</div>
+              </blockquote>
+
+              {/* The Math */}
+              <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg">
+                <h3 className="mb-6 text-xl font-bold text-gray-900">The Math: Sphere ROI</h3>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                    <div className="text-sm text-gray-600">Total investment:</div>
+                    <div className="text-2xl font-bold text-gray-900">$700</div>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                    <div className="text-sm text-gray-600">Total return:</div>
+                    <div className="text-2xl font-bold text-green-700">$14,700</div>
+                  </div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-4 text-center">
+                    <div className="text-sm text-gray-600">ROI:</div>
+                    <div className="text-3xl font-bold text-green-700">21x</div>
+                  </div>
+                </div>
+                <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+                  <div className="text-sm font-medium text-gray-700">
+                    <strong>Key insight:</strong> New agents with limited budgets can achieve outsized returns by systematically nurturing their sphere of influence. The cost per contact is under $2/month.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Case Study 3: Scaling with Just Listed Announcements */}
+      <section className="border-b border-gray-200 py-16 sm:py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8">
+              <div className="mb-4 inline-block rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-800">
+                Case Study #3
+              </div>
+              <h2 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Scaling with Just Listed Announcements
+              </h2>
+              <div className="text-lg text-gray-600">
+                <div className="font-semibold">The Rodriguez Team</div>
+                <div>Austin, TX • 12 years experience, 50+ transactions/year</div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              {/* The Problem */}
+              <div className="rounded-xl border border-red-200 bg-red-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-red-900">The Problem</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Getting listings but not leveraging them for more business</li>
+                  <li>• Manually sending &quot;Just Listed&quot; emails that got ignored</li>
+                  <li>• Missing the compound effect opportunity</li>
+                  <li>• Social media posts disappeared in 24 hours</li>
+                  <li>• No systematic way to turn 1 listing into 3</li>
+                </ul>
+              </div>
+
+              {/* The Strategy */}
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-blue-900">The Strategy</h3>
+                <p className="mb-4 text-gray-700">
+                  Automated &quot;Just Listed&quot; postcards to 200 nearest neighbors every time they take a new listing, creating a consistent farming presence.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <div className="text-sm text-gray-600">Cards per listing:</div>
+                    <div className="text-2xl font-bold text-gray-900">200</div>
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900">Month 5-6: Full Momentum</div>
-                    <div className="text-sm text-gray-700">Two more listings, brand recognition building, $47K total commissions</div>
+                    <div className="text-sm text-gray-600">Trigger:</div>
+                    <div className="text-base font-semibold text-gray-900">Automatic on MLS entry</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Campaign */}
+              <div className="rounded-xl border border-purple-200 bg-purple-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-purple-900">The Campaign (Annual)</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <div className="text-sm text-gray-600">Listings/year:</div>
+                    <div className="text-2xl font-bold text-gray-900">52</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Total postcards:</div>
+                    <div className="text-2xl font-bold text-gray-900">10,400</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Annual cost:</div>
+                    <div className="text-2xl font-bold text-green-700">$15,600</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Results */}
+              <div className="rounded-xl border border-green-200 bg-green-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-green-900">The Results (First Year)</h3>
+                <div className="mb-6 space-y-4">
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">Inbound listing calls:</span>
+                    <span className="text-xl font-bold text-gray-900">127</span>
+                  </div>
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">New listings won:</span>
+                    <span className="text-xl font-bold text-gray-900">18</span>
+                  </div>
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">Buyer referrals from neighbors:</span>
+                    <span className="text-xl font-bold text-gray-900">7</span>
+                  </div>
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">Total new transactions:</span>
+                    <span className="text-xl font-bold text-green-700">25</span>
+                  </div>
+                </div>
+                <div className="border-t border-green-300 pt-6">
+                  <div className="text-sm text-gray-600">Additional commission revenue:</div>
+                  <div className="text-4xl font-bold text-green-700">$312,000</div>
+                </div>
+              </div>
+
+              {/* The Quote */}
+              <blockquote className="border-l-4 border-amber-600 bg-white p-6 text-lg italic text-gray-700 shadow-md">
+                &quot;Every listing now works twice as hard. The postcards go out automatically, and we get calls before the home even hits the market. It&apos;s the compound effect in action.&quot;
+                <div className="mt-4 text-sm font-semibold not-italic text-gray-900">— Maria Rodriguez</div>
+              </blockquote>
+
+              {/* The Math */}
+              <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg">
+                <h3 className="mb-6 text-xl font-bold text-gray-900">The Math: Compound Effect</h3>
+                <div className="mb-6 space-y-4">
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                    <div className="mb-2 text-sm text-gray-600">Marketing investment:</div>
+                    <div className="text-2xl font-bold text-gray-900">$15,600</div>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                    <div className="mb-2 text-sm text-gray-600">Additional commission revenue:</div>
+                    <div className="text-2xl font-bold text-green-700">$312,000</div>
+                  </div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                    <div className="mb-2 text-sm text-gray-600">ROI:</div>
+                    <div className="text-3xl font-bold text-green-700">20x</div>
+                  </div>
+                </div>
+                <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+                  <div className="text-sm font-medium text-gray-700">
+                    <strong>The multiplier effect:</strong> Each listing generated 0.48 additional transactions through automated Just Listed campaigns. Over time, this compounds exponentially.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Case Study 4: Eliminating Zillow Completely */}
+      <section className="border-b border-gray-200 bg-gray-50 py-16 sm:py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8">
+              <div className="mb-4 inline-block rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-800">
+                Case Study #4
+              </div>
+              <h2 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Eliminating Zillow Completely
+              </h2>
+              <div className="text-lg text-gray-600">
+                <div className="font-semibold">Michael Thompson</div>
+                <div>Charlotte, NC • 7 years experience</div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              {/* The Problem */}
+              <div className="rounded-xl border border-red-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-red-900">The Problem</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• $1,800/month on Zillow Premier Agent ($21,600/year)</li>
+                  <li>• Competing with 4-5 other agents for same leads</li>
+                  <li>• Quality inconsistent - lots of tire kickers</li>
+                  <li>• Conversion rate under 2%</li>
+                  <li>• No brand equity building</li>
+                  <li>• Felt like renting his business from Zillow</li>
+                </ul>
+              </div>
+
+              {/* The Strategy */}
+              <div className="rounded-xl border border-blue-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-blue-900">The Strategy</h3>
+                <p className="mb-4 text-gray-700">
+                  Transition budget from Zillow to aggressive geographic farming: 1,200 homes, monthly mailings, combination of Just Listed and market reports.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <div className="text-sm text-gray-600">Farm size:</div>
+                    <div className="text-2xl font-bold text-gray-900">1,200 homes</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Frequency:</div>
+                    <div className="text-xl font-bold text-gray-900">Monthly</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Transition period:</div>
+                    <div className="text-xl font-bold text-gray-900">90 days</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Campaign */}
+              <div className="rounded-xl border border-purple-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-purple-900">The Campaign</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <div className="text-sm text-gray-600">Postcards/month:</div>
+                    <div className="text-2xl font-bold text-gray-900">1,200</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Monthly cost:</div>
+                    <div className="text-2xl font-bold text-green-700">$600</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Annual cost:</div>
+                    <div className="text-2xl font-bold text-green-700">$7,200</div>
+                  </div>
+                </div>
+                <div className="rounded-lg bg-green-50 p-4">
+                  <div className="text-sm text-gray-600">Annual savings vs. Zillow:</div>
+                  <div className="text-2xl font-bold text-green-700">$14,400</div>
+                </div>
+              </div>
+
+              {/* The Results */}
+              <div className="rounded-xl border border-green-200 bg-white p-8 shadow-md">
+                <h3 className="mb-4 text-xl font-bold text-green-900">The Results (After 12 Months)</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-2">
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                    <div className="mb-4 font-semibold text-gray-900">From Zillow (previous year)</div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Leads:</span>
+                        <span className="font-semibold">243</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Conversions:</span>
+                        <span className="font-semibold">4</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Commission:</span>
+                        <span className="font-semibold">$52,000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                    <div className="mb-4 font-semibold text-green-900">From ListHook (new year)</div>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Leads:</span>
+                        <span className="font-semibold">89</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Conversions:</span>
+                        <span className="font-semibold">8</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Commission:</span>
+                        <span className="font-semibold text-green-700">$96,000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="rounded-lg border border-blue-200 bg-blue-50 p-4">
+                    <div className="flex justify-between">
+                      <span className="text-gray-700">Lead quality improvement:</span>
+                      <span className="text-xl font-bold text-blue-900">2x conversion rate</span>
+                    </div>
+                  </div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                    <div className="flex justify-between">
+                      <span className="text-gray-700">Revenue increase:</span>
+                      <span className="text-xl font-bold text-green-700">+$44,000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Quote */}
+              <blockquote className="border-l-4 border-red-600 bg-white p-6 text-lg italic text-gray-700 shadow-md">
+                &quot;Best decision I ever made. I own my pipeline now. People call me because they know my name, not because Zillow sold them my contact info. The quality difference is night and day.&quot;
+                <div className="mt-4 text-sm font-semibold not-italic text-gray-900">— Michael Thompson</div>
+              </blockquote>
+
+              {/* The Math */}
+              <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg">
+                <h3 className="mb-6 text-xl font-bold text-gray-900">The Math: Full Comparison</h3>
+                <div className="mb-6 grid gap-6 md:grid-cols-2">
+                  <div className="rounded-lg border border-red-200 bg-red-50 p-6">
+                    <div className="mb-4 text-center font-semibold text-red-900">Zillow Model</div>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between">
+                        <span>Annual cost:</span>
+                        <span className="font-bold text-red-700">$21,600</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Revenue:</span>
+                        <span className="font-bold">$52,000</span>
+                      </div>
+                      <div className="flex justify-between border-t border-red-200 pt-2">
+                        <span>Net profit:</span>
+                        <span className="font-bold">$30,400</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>ROI:</span>
+                        <span className="text-xl font-bold">2.4x</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-6">
+                    <div className="mb-4 text-center font-semibold text-green-900">ListHook Model</div>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between">
+                        <span>Annual cost:</span>
+                        <span className="font-bold text-green-700">$7,200</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Revenue:</span>
+                        <span className="font-bold">$96,000</span>
+                      </div>
+                      <div className="flex justify-between border-t border-green-200 pt-2">
+                        <span>Net profit:</span>
+                        <span className="font-bold text-green-700">$88,800</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>ROI:</span>
+                        <span className="text-xl font-bold text-green-700">13.3x</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="rounded-lg border border-blue-200 bg-blue-50 p-6 text-center">
+                  <div className="mb-2 text-sm text-gray-600">Additional annual profit by switching:</div>
+                  <div className="text-3xl font-bold text-blue-900">$58,400</div>
+                  <div className="mt-2 text-sm text-gray-700">Plus: $14,400 saved + $44,000 additional revenue</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Case Study 5: Luxury Market Positioning */}
+      <section className="border-b border-gray-200 py-16 sm:py-24">
+        <Container>
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-8">
+              <div className="mb-4 inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-800">
+                Case Study #5
+              </div>
+              <h2 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Luxury Market Positioning
+              </h2>
+              <div className="text-lg text-gray-600">
+                <div className="font-semibold">Amanda Sterling</div>
+                <div>San Diego, CA • 9 years experience, luxury specialist</div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              {/* The Problem */}
+              <div className="rounded-xl border border-red-200 bg-red-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-red-900">The Problem</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Competing for luxury listings with established agents</li>
+                  <li>• Hard to break into exclusive neighborhoods</li>
+                  <li>• Previous marketing felt too generic for high-end clients</li>
+                  <li>• Needed to demonstrate market expertise</li>
+                  <li>• $3M+ homes require different approach</li>
+                </ul>
+              </div>
+
+              {/* The Strategy */}
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-blue-900">The Strategy</h3>
+                <p className="mb-4 text-gray-700">
+                  Ultra-targeted campaign to just 180 luxury homes ($2M+), quarterly high-end market reports showcasing recent sales and market insights.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <div>
+                    <div className="text-sm text-gray-600">Target properties:</div>
+                    <div className="text-2xl font-bold text-gray-900">180 homes</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Average value:</div>
+                    <div className="text-2xl font-bold text-gray-900">$3.2M</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Campaign */}
+              <div className="rounded-xl border border-purple-200 bg-purple-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-purple-900">The Campaign</h3>
+                <div className="mb-6 grid gap-4 sm:grid-cols-3">
+                  <div>
+                    <div className="text-sm text-gray-600">Postcards/year:</div>
+                    <div className="text-2xl font-bold text-gray-900">720</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Annual cost:</div>
+                    <div className="text-2xl font-bold text-green-700">$1,080</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600">Design:</div>
+                    <div className="text-base font-semibold text-gray-900">Premium</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* The Results */}
+              <div className="rounded-xl border border-green-200 bg-green-50 p-8">
+                <h3 className="mb-4 text-xl font-bold text-green-900">The Results (18 Months)</h3>
+                <div className="mb-6 space-y-4">
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">Private listing consultations:</span>
+                    <span className="text-xl font-bold text-gray-900">14</span>
+                  </div>
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">Luxury listings won:</span>
+                    <span className="text-xl font-bold text-gray-900">3</span>
+                  </div>
+                  <div className="flex justify-between rounded-lg bg-white p-4">
+                    <span className="text-gray-700">Average commission:</span>
+                    <span className="text-xl font-bold text-gray-900">$48,000</span>
+                  </div>
+                </div>
+                <div className="border-t border-green-300 pt-6">
+                  <div className="text-sm text-gray-600">Total commission revenue:</div>
+                  <div className="text-4xl font-bold text-green-700">$144,000</div>
+                </div>
+              </div>
+
+              {/* The Quote */}
+              <blockquote className="border-l-4 border-indigo-600 bg-white p-6 text-lg italic text-gray-700 shadow-md">
+                &quot;High-net-worth clients appreciate sophistication and consistency. The quarterly market reports position me as the neighborhood expert. When they&apos;re ready to sell their $3M home, they call me first.&quot;
+                <div className="mt-4 text-sm font-semibold not-italic text-gray-900">— Amanda Sterling</div>
+              </blockquote>
+
+              {/* The Math */}
+              <div className="rounded-xl border border-gray-300 bg-white p-8 shadow-lg">
+                <h3 className="mb-6 text-xl font-bold text-gray-900">The Math: Luxury ROI</h3>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                    <div className="text-sm text-gray-600">18-month investment:</div>
+                    <div className="text-2xl font-bold text-gray-900">$1,620</div>
+                  </div>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                    <div className="text-sm text-gray-600">Total return:</div>
+                    <div className="text-2xl font-bold text-green-700">$144,000</div>
+                  </div>
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-4 text-center">
+                    <div className="text-sm text-gray-600">ROI:</div>
+                    <div className="text-3xl font-bold text-green-700">89x</div>
+                  </div>
+                </div>
+                <div className="mt-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+                  <div className="text-sm font-medium text-gray-700">
+                    <strong>Luxury insight:</strong> Higher-value properties require fewer conversions to generate significant revenue. A focused, premium approach to 180 homes delivered better results than broad campaigns to thousands.
                   </div>
                 </div>
               </div>

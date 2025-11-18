@@ -9,18 +9,44 @@ const contactFormSchema = z.object({
   phone: z.string().min(10, 'Please enter a valid phone number'),
   company: z.string().optional(),
   message: z.string().min(10, 'Message must be at least 10 characters'),
+  turnstileToken: z.string().min(1, 'Security verification is required'),
 });
 
 export async function POST(request: Request) {
   try {
-    // Initialize Resend client
-    const resend = new Resend(process.env.RESEND_API_KEY);
-
     // Parse and validate request body
     const body = await request.json();
     const validatedData = contactFormSchema.parse(body);
 
-    const { name, email, phone, company, message } = validatedData;
+    const { name, email, phone, company, message, turnstileToken } = validatedData;
+
+    // Verify Turnstile token with Cloudflare
+    const turnstileResponse = await fetch(
+      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          secret: process.env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      }
+    );
+
+    const turnstileResult = await turnstileResponse.json();
+
+    if (!turnstileResult.success) {
+      console.error('Turnstile verification failed:', turnstileResult);
+      return NextResponse.json(
+        { error: 'Security verification failed. Please try again.' },
+        { status: 400 }
+      );
+    }
+
+    // Initialize Resend client
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Send email via Resend
     const { data, error } = await resend.emails.send({

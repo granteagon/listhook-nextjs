@@ -10,13 +10,13 @@ export default function TwilioVerificationPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white shadow-sm rounded-lg p-8 md:p-12">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+        <h1 className="text-3xl font-bold text-foreground mb-8">
           SMS Messaging Terms & Opt-In Policy
         </h1>
 
         {/* Company Information Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
             Company Information
           </h2>
           <div className="bg-gray-50 p-6 rounded-lg">
@@ -24,17 +24,17 @@ export default function TwilioVerificationPage() {
               <strong>Company Name:</strong> ListHook
             </p>
             <p className="text-gray-700 mb-2">
-              <strong>Address:</strong> 49 A Calhoun St, Charleston, SC 29401
+              <strong>Address:</strong> 264 Alexandra Dr #5, Mount Pleasant, SC 29464
             </p>
             <p className="text-gray-700 mb-2">
               <strong>Email:</strong>{' '}
-              <a href="mailto:support@listhook.com" className="text-blue-600 hover:text-blue-800 underline">
+              <a href="mailto:support@listhook.com" className="text-primary hover:text-primary/80 underline">
                 support@listhook.com
               </a>
             </p>
             <p className="text-gray-700">
               <strong>Phone:</strong>{' '}
-              <a href="tel:+18434108360" className="text-blue-600 hover:text-blue-800 underline">
+              <a href="tel:+18434108360" className="text-primary hover:text-primary/80 underline">
                 (843) 410-8360
               </a>
             </p>
@@ -43,35 +43,36 @@ export default function TwilioVerificationPage() {
 
         {/* How to Opt-In Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-            How to Opt-In
-          </h2>
+          <h2 className="text-2xl font-semibold text-foreground mb-4">How to Opt-In</h2>
           <div className="prose prose-gray max-w-none">
             <p className="text-gray-700 mb-4">
-              By providing your mobile phone number when creating a postcard marketing campaign on ListHook,
-              you are expressly consenting to receive SMS text messages from us. Your consent is obtained
-              before any messages are sent to your device.
+              Clients provide explicit, written consent on our platform when they create a campaign or register for an account. The exact opt-in language presented to the user with a required checkbox is as follows:
             </p>
-            <p className="text-gray-700 mb-4">
-              <strong>Types of Messages You'll Receive:</strong>
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
-              <li>Campaign status notifications and updates</li>
-              <li>Lead alerts when prospects respond to your campaigns</li>
-              <li>Important account notifications</li>
-              <li>Campaign performance summaries</li>
-              <li>Service updates and announcements</li>
-            </ul>
+
+            <blockquote className="border-l-4 border-gray-300 pl-4 py-2 my-4 bg-gray-50 text-gray-700 not-prose">
+              <p className="font-medium">
+                "By providing your phone number and checking this box, you agree to receive transactional and alert text messages from <strong>ListHook</strong> at the number provided. These messages will include:
+              </p>
+              <ul className="list-disc pl-8 my-3 space-y-1">
+                <li>Campaign status notifications and updates</li>
+                <li>Lead alerts when prospects respond to your campaigns</li>
+                <li>Important account notifications (including 2FA codes)</li>
+                <li>Campaign performance summaries</li>
+                <li>Service updates and announcements</li>
+              </ul>
+              <p className="font-medium">
+                Consent is not a condition of service. Msg frequency varies. Msg & data rates may apply. You may opt-out at any time by replying STOP. View our Privacy Policy and Terms of Service."
+              </p>
+            </blockquote>
             <p className="text-gray-700 mt-4">
-              Consent to receive SMS messages is not a condition of purchase. Standard message and data
-              rates may apply based on your mobile carrier plan.
+              Consent to receive SMS messages is not a condition of purchase. Standard message and data rates may apply based on your mobile carrier plan.
             </p>
           </div>
         </section>
 
         {/* Message Frequency Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
             Message Frequency
           </h2>
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
@@ -93,7 +94,7 @@ export default function TwilioVerificationPage() {
 
         {/* How to Opt-Out Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
             How to Opt-Out
           </h2>
           <div className="prose prose-gray max-w-none">
@@ -103,13 +104,13 @@ export default function TwilioVerificationPage() {
             </p>
 
             <div className="bg-yellow-50 border border-yellow-200 p-6 rounded-lg mb-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              <h3 className="text-lg font-semibold text-foreground mb-3">
                 Text Message Opt-Out
               </h3>
               <p className="text-gray-700 mb-2">
                 Reply to any message with one of the following keywords:
               </p>
-              <p className="text-gray-900 font-mono font-bold text-lg mb-2">
+              <p className="text-foreground font-mono font-bold text-lg mb-2">
                 STOP | UNSUBSCRIBE | QUIT | CANCEL | END
               </p>
               <p className="text-gray-700 text-sm">
@@ -120,11 +121,11 @@ export default function TwilioVerificationPage() {
             <div className="space-y-3 text-gray-700">
               <p>
                 <strong>Contact Support:</strong> You may also opt-out by contacting our support team at{' '}
-                <a href="mailto:support@listhook.com" className="text-blue-600 hover:text-blue-800 underline">
+                <a href="mailto:support@listhook.com" className="text-primary hover:text-primary/80 underline">
                   support@listhook.com
                 </a>{' '}
                 or calling{' '}
-                <a href="tel:+18434108360" className="text-blue-600 hover:text-blue-800 underline">
+                <a href="tel:+18434108360" className="text-primary hover:text-primary/80 underline">
                   (843) 410-8360
                 </a>.
               </p>
@@ -142,7 +143,7 @@ export default function TwilioVerificationPage() {
 
         {/* Help Information Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
             Help & Support
           </h2>
           <div className="bg-gray-50 p-6 rounded-lg">
@@ -156,13 +157,13 @@ export default function TwilioVerificationPage() {
               </li>
               <li>
                 <strong>Email Support:</strong>{' '}
-                <a href="mailto:support@listhook.com" className="text-blue-600 hover:text-blue-800 underline">
+                <a href="mailto:support@listhook.com" className="text-primary hover:text-primary/80 underline">
                   support@listhook.com
                 </a>
               </li>
               <li>
                 <strong>Phone Support:</strong>{' '}
-                <a href="tel:+18434108360" className="text-blue-600 hover:text-blue-800 underline">
+                <a href="tel:+18434108360" className="text-primary hover:text-primary/80 underline">
                   (843) 410-8360
                 </a>
               </li>
@@ -172,7 +173,7 @@ export default function TwilioVerificationPage() {
 
         {/* Privacy & Terms Links Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
             Privacy & Terms
           </h2>
           <div className="prose prose-gray max-w-none">
@@ -182,14 +183,14 @@ export default function TwilioVerificationPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-4">
               <Link
-                href="/privacy"
-                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                href="/privacy-policy"
+                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
                 View Privacy Policy
               </Link>
               <Link
-                href="/terms"
-                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                href="/terms-of-service"
+                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
                 View Terms of Service
               </Link>
@@ -206,7 +207,7 @@ export default function TwilioVerificationPage() {
 
         {/* Carrier Information Section */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-2xl font-semibold text-foreground mb-4">
             Carrier Information
           </h2>
           <div className="prose prose-gray max-w-none">
@@ -226,7 +227,7 @@ export default function TwilioVerificationPage() {
               <div>And other carriers</div>
             </div>
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded mt-4">
-              <p className="text-gray-900 font-semibold mb-2">
+              <p className="text-foreground font-semibold mb-2">
                 Important Carrier Notice:
               </p>
               <p className="text-gray-700 text-sm">

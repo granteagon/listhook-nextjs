@@ -33,5 +33,11 @@ services:
         scope: RUN_TIME
         type: SECRET
       - key: CONTACT_EMAIL_TO
-        value: support@listhook.com
+        value: sales@listhook.com
         scope: RUN_TIME
+      - key: NEXT_PUBLIC_TURNSTILE_SITE_KEY
+        value: 0x4AAAAAAB5jdzp0W4-fxQ6b
+        scope: RUN_AND_BUILD_TIME
+      - key: TURNSTILE_SECRET_KEY
+        scope: RUN_TIME
+        type: SECRET

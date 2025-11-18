@@ -1,37 +1,34 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import Card, { CardHeader, CardTitle, CardContent } from '@/components/ui/Card';
-import Container from '@/components/ui/Container';
+import WorkflowSection from "@/components/WorkflowSection";
+import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
+import { toast } from "sonner";
+import { Turnstile } from "@marsidev/react-turnstile";
 
-// Validation schema
-const contactFormSchema = z.object({
-  name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Please enter a valid email address'),
-  phone: z.string().min(10, 'Please enter a valid phone number'),
-  company: z.string().optional(),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
-
-type ContactFormData = z.infer<typeof contactFormSchema>;
-
-export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
   });
 
-  const onSubmit = async (data: ContactFormData) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Check if Turnstile token is present
+    if (!turnstileToken) {
+      toast.error("Please complete the security verification.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -40,342 +37,250 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken,
+        }),
       });
 
-      const result = await response.json();
+      const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(result.error || 'Failed to send message');
+        // Show specific error message from server
+        const errorMessage = data.error || 'Failed to send message';
+        const details = data.details ? '\n' + data.details.map((d: any) => d.message).join('\n') : '';
+        toast.error(errorMessage + details);
+        return;
       }
 
-      setSubmitSuccess(true);
-      reset();
-
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
+      // Success - show confirmation and reset form
+      toast.success("Message sent successfully! We'll respond within 24 hours.");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+      setTurnstileToken(""); // Reset Turnstile token
     } catch (error) {
-      console.error('Form submission error:', error);
-      alert(error instanceof Error ? error.message : 'Failed to send message. Please try again later.');
+      // Network or unexpected error
+      toast.error("Failed to send message. Please check your connection and try again.");
+      console.error('Contact form submission error:', error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
   return (
-    <div className="pt-16">
+    <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-16">
-        <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-900">
-              Ready to Take Back Control of Your Marketing?
+      <section className="py-20 lg:py-32">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h1 className="text-5xl lg:text-6xl font-black mb-6">
+              Let's Talk About Your Marketing
             </h1>
-            <p className="text-xl text-gray-600">
-              Talk to our team about building a campaign for your market. No obligations. No pressure. Just a real conversation about how postcards can build your pipeline.
+            <p className="text-xl text-muted-foreground">
+              Get a custom quote and see how ListHook can transform your lead generation
             </p>
           </div>
-        </Container>
-      </section>
 
-      {/* Main Content Section */}
-      <section className="py-16 bg-white">
-        <Container>
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Send us a message</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {submitSuccess && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                      <p className="text-green-800 font-medium">
-                        Thank you for your message! We'll get back to you shortly.
+            <div className="bg-card rounded-2xl p-8 lg:p-10 shadow-large">
+              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    Full Name *
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    Email Address *
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    placeholder="john@example.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    Phone Number * <span className="text-muted-foreground font-normal">(min 10 digits)</span>
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="(555) 123-4567"
+                    minLength={10}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    Tell Us About Your Goals * <span className="text-muted-foreground font-normal">(min 10 characters)</span>
+                  </label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    placeholder="What areas are you targeting? What's your typical budget for marketing?"
+                    rows={5}
+                    minLength={10}
+                  />
+                </div>
+
+                {/* Turnstile Security Widget */}
+                <div className="flex justify-center">
+                  <Turnstile
+                    siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
+                    onSuccess={(token) => setTurnstileToken(token)}
+                    onError={() => {
+                      setTurnstileToken("");
+                      toast.error("Security verification failed. Please try again.");
+                    }}
+                    onExpire={() => setTurnstileToken("")}
+                  />
+                </div>
+
+                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting || !turnstileToken}>
+                  {isSubmitting ? "Sending..." : "Get Your Custom Quote"}
+                </Button>
+
+                <p className="text-sm text-muted-foreground text-center">
+                  We'll respond within 24 hours
+                </p>
+              </form>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-8">
+              <div className="bg-card rounded-2xl p-8 shadow-soft">
+                <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
+                      <Mail className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold mb-1">Email Us</h3>
+                      <a href="mailto:sales@listhook.com" className="text-primary hover:underline">
+                        sales@listhook.com
+                      </a>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        We respond within 24 hours
                       </p>
                     </div>
-                  )}
-
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                    {/* Name Field */}
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Name <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="name"
-                        type="text"
-                        {...register('name')}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                          errors.name ? 'border-red-500' : 'border-gray-300'
-                        }`}
-                        placeholder="John Doe"
-                      />
-                      {errors.name && (
-                        <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-                      )}
-                    </div>
-
-                    {/* Email Field */}
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        {...register('email')}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                          errors.email ? 'border-red-500' : 'border-gray-300'
-                        }`}
-                        placeholder="john@example.com"
-                      />
-                      {errors.email && (
-                        <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-                      )}
-                    </div>
-
-                    {/* Phone Field */}
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        {...register('phone')}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                          errors.phone ? 'border-red-500' : 'border-gray-300'
-                        }`}
-                        placeholder="(843) 410-8360"
-                      />
-                      {errors.phone && (
-                        <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
-                      )}
-                    </div>
-
-                    {/* Company Field */}
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        Company/Brokerage
-                      </label>
-                      <input
-                        id="company"
-                        type="text"
-                        {...register('company')}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Your Brokerage Name"
-                      />
-                    </div>
-
-                    {/* Message Field */}
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Message <span className="text-red-500">*</span>
-                      </label>
-                      <textarea
-                        id="message"
-                        {...register('message')}
-                        rows={6}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                          errors.message ? 'border-red-500' : 'border-gray-300'
-                        }`}
-                        placeholder="Tell us about your needs..."
-                      />
-                      {errors.message && (
-                        <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
-                      )}
-                    </div>
-
-                    {/* Submit Button */}
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className={`w-full px-8 py-4 rounded-lg text-lg font-semibold transition-colors ${
-                        isSubmitting
-                          ? 'bg-gray-400 cursor-not-allowed'
-                          : 'bg-blue-600 hover:bg-blue-700 text-white'
-                      }`}
-                    >
-                      {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </button>
-                  </form>
-                </CardContent>
-              </Card>
-
-              {/* Trust Builders */}
-              <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm font-medium">No setup fees</span>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm font-medium">Cancel anytime</span>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
+                      <Phone className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold mb-1">Call Us</h3>
+                      <a href="tel:+18434108360" className="text-primary hover:underline">
+                        (843) 410-8360
+                      </a>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        Mon-Fri 9am-6pm EST
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm font-medium">You control the budget</span>
-                  </div>
-                  <div className="flex items-center text-gray-700">
-                    <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm font-medium">First strategy consultation free</span>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 flex-shrink-0">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold mb-1">Visit Us</h3>
+                      <p className="text-muted-foreground">
+                        264 Alexandra Dr #5<br />
+                        Mount Pleasant, SC 29464
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Contact Information Sidebar */}
-            <div className="space-y-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl">Contact Information</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {/* Phone */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                        <svg
-                          className="w-5 h-5 text-blue-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                        <a href="tel:+18434108360" className="text-blue-600 hover:underline">
-                          (843) 410-8360
-                        </a>
-                      </div>
+              <div className="bg-muted/30 rounded-2xl p-8">
+                <h3 className="text-xl font-bold mb-4">What Happens Next?</h3>
+                <ol className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                      1
+                    </span>
+                    <div>
+                      <p className="font-medium">We Review Your Info</p>
+                      <p className="text-sm text-muted-foreground">Our team analyzes your market and goals</p>
                     </div>
-
-                    {/* Email */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                        <svg
-                          className="w-5 h-5 text-blue-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                        <a href="mailto:support@listhook.com" className="text-blue-600 hover:underline">
-                          support@listhook.com
-                        </a>
-                      </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                      2
+                    </span>
+                    <div>
+                      <p className="font-medium">Custom Quote Prepared</p>
+                      <p className="text-sm text-muted-foreground">We create a tailored plan and pricing</p>
                     </div>
-
-                    {/* Office */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                        <svg
-                          className="w-5 h-5 text-blue-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Office</h3>
-                        <p className="text-gray-600">
-                          49 A Calhoun St<br />
-                          Charleston, SC 29401
-                        </p>
-                      </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                      3
+                    </span>
+                    <div>
+                      <p className="font-medium">Strategy Call</p>
+                      <p className="text-sm text-muted-foreground">We discuss your campaign strategy together</p>
                     </div>
-
-                    {/* Hours */}
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                        <svg
-                          className="w-5 h-5 text-blue-600"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 mb-1">Hours</h3>
-                        <p className="text-gray-600">
-                          Monday-Friday<br />
-                          9am-5pm EST
-                        </p>
-                      </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-sm font-bold flex-shrink-0">
+                      4
+                    </span>
+                    <div>
+                      <p className="font-medium">Launch Your Campaign</p>
+                      <p className="text-sm text-muted-foreground">Start generating leads on autopilot</p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </li>
+                </ol>
+              </div>
 
-              {/* Additional Help Card */}
-              <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
-                <CardContent className="text-center">
-                  <div className="text-3xl mb-3">💡</div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Quick Questions?</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Check out our FAQ page for instant answers to common questions.
-                  </p>
-                  <a
-                    href="/faq"
-                    className="inline-block text-blue-600 font-semibold hover:underline"
-                  >
-                    Visit FAQ
-                  </a>
-                </CardContent>
-              </Card>
+              <div className="bg-primary rounded-2xl p-8 text-primary-foreground">
+                <h3 className="text-xl font-bold mb-2">No Obligation Quote</h3>
+                <p className="opacity-90">
+                  We'll create a custom plan for your market with transparent pricing. No pressure, just options.
+                </p>
+              </div>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
-    </div>
+
+      <WorkflowSection />
+    </main>
   );
 }

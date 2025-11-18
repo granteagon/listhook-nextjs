@@ -1,233 +1,190 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import Card from '@/components/ui/Card';
-import { Mail, QrCode, Users, Target, ChartBar, Clock, Shield, Zap, Palette } from 'lucide-react';
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Features - Automated Postcard Marketing Tools',
-  description: 'Powerful features designed specifically for real estate agents: automated postcards, QR code tracking, smart targeting, ROI analytics, and compliance-ready templates. Start generating leads automatically.',
-  openGraph: {
-    title: 'ListHook Features - Everything You Need to Win More Listings',
-    description: 'Automated postcards, QR tracking, smart targeting, and ROI analytics designed for real estate agents.',
-    images: ['/og-image.png'],
+import { CheckCircle2, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import heroImage from "@/assets/hero-features-main.png";
+import featureLeadOwnership from "@/assets/feature-lead-ownership.png";
+import featureNotifications from "@/assets/feature-instant-notifications.png";
+import featureAutomation from "@/assets/feature-automation.png";
+import featureTargeting from "@/assets/feature-smart-targeting.png";
+
+const features = [
+  {
+    label: "LEAD OWNERSHIP",
+    title: "Own 100% of Your Leads",
+    description: "Create your own leads and let clients find what works for both of you.",
+    benefits: [
+      "No more emailing back & forth, just a single, connected calendar",
+      "Leads are yours alone—no sharing with competitors",
+      "Zero commission fees on your hard-earned deals"
+    ],
+    image: featureLeadOwnership
   },
-};
+  {
+    label: "INSTANT NOTIFICATIONS",
+    title: "Real-Time Lead Alerts",
+    description: "Get notified the moment a prospect scans your postcard with their full contact details.",
+    benefits: [
+      "Instant notifications when prospects engage",
+      "Complete contact information delivered immediately",
+      "Track campaign performance in real-time"
+    ],
+    image: featureNotifications
+  },
+  {
+    label: "AUTOMATION",
+    title: "Marketing on Autopilot",
+    description: "We handle everything—design, printing, and mailing. You focus on closing deals.",
+    benefits: [
+      "Fully automated campaign creation and management",
+      "Professional design templates included",
+      "Direct mail handling from start to finish"
+    ],
+    image: featureAutomation
+  },
+  {
+    label: "SMART TARGETING",
+    title: "Find Your Next Seller",
+    description: "Target homeowners most likely to sell using property data and market intelligence.",
+    benefits: [
+      "Data-driven targeting based on market indicators",
+      "Identify motivated sellers before your competition",
+      "Focus your marketing budget where it counts"
+    ],
+    image: featureTargeting
+  }
+];
 
-export default function FeaturesPage() {
+export default function Features() {
   return (
-    <div className="pt-16">
+    <main>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-              Everything You Need to Win More Listings
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Powerful features designed specifically for real estate agents who want to grow their business through direct mail marketing.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Contact Sales
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Primary Features */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Mail className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Automated Postcards
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Create Just Listed & Just Sold postcards instantly from your MLS data. No design skills needed.
+      <section className="py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="space-y-8">
+              <h1 className="text-5xl lg:text-6xl font-black leading-tight">
+                Generate Leads like a Pro with ListHook
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-lg">
+                Discover the postcard marketing system with only essential features that will delight you and your clients.
               </p>
-            </Card>
 
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <QrCode className="w-6 h-6 text-blue-700" />
+              {/* Email Signup */}
+              <div className="flex flex-col sm:flex-row gap-3 max-w-lg">
+                <div className="relative flex-1">
+                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                  <Input
+                    type="email"
+                    placeholder="Enter your e-mail"
+                    className="pl-10 h-12"
+                  />
+                </div>
+                <Button size="lg" className="h-12 px-8">
+                  Start Free
+                </Button>
               </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                QR Code Tracking
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Generate unique QR codes and landing pages for each campaign. Track scans and capture leads automatically.
-              </p>
-            </Card>
 
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-blue-700" />
+              {/* Trust Badges */}
+              <div className="flex flex-wrap gap-6">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 fill-green-600 text-white" />
+                  <span className="text-sm font-medium">24/7 Support</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 fill-green-600 text-white" />
+                  <span className="text-sm font-medium">Free lifetime plan</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-5 w-5 fill-green-600 text-white" />
+                  <span className="text-sm font-medium">No Credit Card Required</span>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Sphere & Farm Campaigns
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Target your sphere of influence or farm specific neighborhoods with personalized campaigns.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Feature Highlight Section */}
-      <section className="py-20 bg-blue-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Turn Your Listings Into More Listings
-                </h2>
-                <p className="text-xl text-blue-100 mb-8">
-                  ListHook automates the 20% of marketing that yields 80% of results. Our platform handles everything from design to delivery, so you can focus on what matters most - closing deals.
-                </p>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-coral-500 mr-3 mt-1">•</span>
-                    <span className="text-blue-100">Automated campaign creation from MLS data</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-coral-500 mr-3 mt-1">•</span>
-                    <span className="text-blue-100">Professional templates designed for conversion</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-coral-500 mr-3 mt-1">•</span>
-                    <span className="text-blue-100">Digital tracking with physical mail impact</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img
-                  src="https://images.pexels.com/photos/8293778/pexels-photo-8293778.jpeg"
-                  alt="ListHook Dashboard"
-                  className="rounded-lg shadow-xl"
-                />
-              </div>
+            {/* Right Image */}
+            <div className="relative">
+              <img
+                src={heroImage}
+                alt="Real estate agent celebrating success with lead notifications"
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Additional Features */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
-            Powerful Features for Modern Agents
-          </h2>
+      {/* Features Sections */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="space-y-32">
+            {features.map((feature, index) => {
+              const isEven = index % 2 === 0;
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Smart Targeting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Automatically select the optimal radius around your listings based on neighborhood demographics.
-              </p>
-            </Card>
-
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <ChartBar className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                ROI Analytics
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Track campaign performance, lead generation, and return on investment in real-time.
-              </p>
-            </Card>
-
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Clock className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Automated Timing
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Schedule campaigns to hit mailboxes at the perfect time based on market data.
-              </p>
-            </Card>
-
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Compliance Ready
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                All templates are reviewed by legal experts and comply with real estate regulations.
-              </p>
-            </Card>
-
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Zap className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Instant Setup
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Connect your MLS and start your first campaign in under 5 minutes.
-              </p>
-            </Card>
-
-            <Card hover className="p-8">
-              <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                <Palette className="w-6 h-6 text-blue-700" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-3">
-                Brand Consistency
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Maintain your brand identity across all campaigns with custom templates.
-              </p>
-            </Card>
+              return (
+                <div key={index} className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div className={isEven ? "order-1" : "order-2"}>
+                    <div className="space-y-6">
+                      <div className="inline-block">
+                        <span className="text-sm font-bold tracking-wider text-accent uppercase">
+                          {feature.label}
+                        </span>
+                      </div>
+                      <h2 className="text-4xl lg:text-5xl font-black leading-tight">
+                        {feature.title}
+                      </h2>
+                      <p className="text-lg text-muted-foreground">
+                        {feature.description}
+                      </p>
+                      <ul className="space-y-4">
+                        {feature.benefits.map((benefit, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <CheckCircle2 className="h-5 w-5 fill-green-600 text-white flex-shrink-0 mt-0.5" />
+                            <span className="text-muted-foreground">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={isEven ? "order-2" : "order-1"}>
+                    <div className="relative rounded-2xl overflow-hidden">
+                      <img
+                        src={feature.image}
+                        alt={feature.title}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Get More Listings?
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl lg:text-5xl font-black">
+              Ready to Own Your Leads?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join successful agents who are growing their business with ListHook.
+            <p className="text-xl text-muted-foreground">
+              Join agents who are building their brand and generating qualified leads with ListHook
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Contact Sales
-              </Link>
-              <Link
-                href="/pricing"
-                className="inline-block bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                View Pricing
-              </Link>
+              <Button size="lg" asChild>
+                <a href="/contact">Get Started</a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="/pricing">View Pricing</a>
+              </Button>
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

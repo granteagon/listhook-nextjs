@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-background py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-background pt-10 pb-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -54,7 +54,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 fill-green-600 text-white" />
-                <span className="text-sm font-medium">100% Hands-Off</span>
+                <span className="text-sm font-medium">100% Automated</span>
               </div>
             </div>
 

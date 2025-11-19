@@ -33,7 +33,7 @@ const CTASection = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-5 w-5 fill-green-600 text-white" />
-              <span>100% Hands-Off</span>
+              <span>100% Automated</span>
             </div>
           </div>
         </div>

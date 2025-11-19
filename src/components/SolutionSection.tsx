@@ -10,7 +10,7 @@ const features = [
   },
   {
     icon: Zap,
-    title: "2. You Focus on Closing (Hands-Off)",
+    title: "2. You Focus on Closing (Automated)",
     description: "You're a closer, not a direct mail manager. Our white-glove service handles the entire campaign—strategy, design, and execution—so you just handle the appointments."
   },
   {

@@ -80,7 +80,7 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h1 className="text-5xl lg:text-6xl font-black mb-6">
-              Let's Talk About Your Marketing
+              Let's Automate Your Leads
             </h1>
             <p className="text-xl text-muted-foreground">
               Get a custom quote and see how ListHook can transform your lead generation

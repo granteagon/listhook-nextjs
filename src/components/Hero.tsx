@@ -24,7 +24,7 @@ const Hero = () => {
 
             {/* Headline */}
             <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-              Your Leads. Your Commission. Done For You.
+              Exclusive seller lead automation. <span className="text-accent">Zero commission fees.</span>
             </h1>
 
             {/* Subheadline */}

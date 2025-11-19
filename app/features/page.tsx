@@ -3,11 +3,7 @@
 import { CheckCircle2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import heroImage from "@/assets/hero-features-main.png";
-import featureLeadOwnership from "@/assets/feature-lead-ownership.png";
-import featureNotifications from "@/assets/feature-instant-notifications.png";
-import featureAutomation from "@/assets/feature-automation.png";
-import featureTargeting from "@/assets/feature-smart-targeting.png";
+import Image from "next/image";
 
 const features = [
   {
@@ -19,7 +15,7 @@ const features = [
       "Leads are yours alone—no sharing with competitors",
       "Zero commission fees on your hard-earned deals"
     ],
-    image: featureLeadOwnership
+    image: "/images/feature-lead-ownership.png"
   },
   {
     label: "INSTANT NOTIFICATIONS",
@@ -30,7 +26,7 @@ const features = [
       "Complete contact information delivered immediately",
       "Track campaign performance in real-time"
     ],
-    image: featureNotifications
+    image: "/images/feature-instant-notifications.png"
   },
   {
     label: "AUTOMATION",
@@ -41,7 +37,7 @@ const features = [
       "Professional design templates included",
       "Direct mail handling from start to finish"
     ],
-    image: featureAutomation
+    image: "/images/feature-automation.png"
   },
   {
     label: "SMART TARGETING",
@@ -52,7 +48,7 @@ const features = [
       "Identify motivated sellers before your competition",
       "Focus your marketing budget where it counts"
     ],
-    image: featureTargeting
+    image: "/images/feature-smart-targeting.png"
   }
 ];
 
@@ -106,9 +102,11 @@ export default function Features() {
 
             {/* Right Image */}
             <div className="relative">
-              <img
-                src={heroImage}
+              <Image
+                src="/images/hero-features-main.png"
                 alt="Real estate agent celebrating success with lead notifications"
+                width={1200}
+                height={900}
                 className="w-full h-auto rounded-2xl"
               />
             </div>
@@ -150,9 +148,11 @@ export default function Features() {
                   </div>
                   <div className={isEven ? "order-2" : "order-1"}>
                     <div className="relative rounded-2xl overflow-hidden">
-                      <img
+                      <Image
                         src={feature.image}
                         alt={feature.title}
+                        width={1200}
+                        height={900}
                         className="w-full h-auto"
                       />
                     </div>
